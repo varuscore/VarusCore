@@ -1,0 +1,179 @@
+<svg width="620" height="520" viewBox="0 0 620 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- ── Canvas background ── -->
+  <rect width="620" height="520" fill="#F1F5F9"/>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!--  PANEL 1 — Primary lockup, white background           -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <rect x="12" y="12" width="596" height="196" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.2"/>
+
+  <!-- Section label -->
+  <text x="32" y="36" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#94A3B8">PRIMARY MARK</text>
+
+  <!-- ── Blue mark container ── -->
+  <rect x="32" y="50" width="124" height="124" rx="18" fill="#2563EB"/>
+
+  <!--
+    The VarusCore calligraphic V mark — 200×200 internal coordinate system.
+
+    Construction:
+      Left arm  (thick): center-line from (44,38) → (100,172), width 24px
+      Right arm (thin) : center-line from (100,172) → (156,38), width 10px
+      Calligraphic ratio: 2.4 : 1  (broad-nib pen at ~45° angle)
+
+    Path traces: outer-left-top → outer-left-bottom → outer-apex-curve →
+                 outer-right-top → inner-right-top → inner-right-bottom →
+                 inner-apex-curve → inner-left-bottom → inner-left-top → close
+
+    Outer apex Q control: (100, 185) — dips 13px below arms for smooth pointed bottom
+    Inner apex Q control: (100, 163) — pulls 9px above arms, matching arm wall thickness
+  -->
+  <svg x="32" y="50" width="124" height="124" viewBox="0 0 200 200">
+    <!-- Front-facing frog (white on blue square) -->
+    <path d="M100,18 C78,18 58,28 50,45 C43,41 33,52 38,66 C30,76 28,94 36,108 C38,120 44,134 55,142 C57,158 62,172 72,180 C82,188 93,185 98,175 L100,170 L102,175 C107,185 118,188 128,180 C138,172 143,158 145,142 C156,134 162,120 164,108 C172,94 170,76 162,66 C167,52 157,41 150,45 C142,28 122,18 100,18 Z" fill="white"/>
+    <!-- Belly cutout -->
+    <ellipse cx="100" cy="124" rx="32" ry="44" fill="#2563EB"/>
+    <!-- Left eye sclera -->
+    <circle cx="66" cy="68" r="28" fill="white"/>
+    <!-- Right eye sclera -->
+    <circle cx="134" cy="68" r="28" fill="white"/>
+    <!-- Left pupil -->
+    <circle cx="70" cy="73" r="16" fill="#1D4ED8"/>
+    <!-- Right pupil -->
+    <circle cx="138" cy="73" r="16" fill="#1D4ED8"/>
+    <!-- Left shine -->
+    <circle cx="62" cy="63" r="7" fill="white"/>
+    <!-- Right shine -->
+    <circle cx="130" cy="63" r="7" fill="white"/>
+    <!-- Toe pads left -->
+    <circle cx="52" cy="170" r="8" fill="white"/>
+    <circle cx="68" cy="180" r="8" fill="white"/>
+    <circle cx="86" cy="185" r="8" fill="white"/>
+    <!-- Toe pads right -->
+    <circle cx="114" cy="185" r="8" fill="white"/>
+    <circle cx="132" cy="180" r="8" fill="white"/>
+    <circle cx="148" cy="170" r="8" fill="white"/>
+  </svg>
+
+  <!-- ── Wordmark ── -->
+  <text x="176" y="104" font-size="42" font-weight="800" letter-spacing="-1.6" fill="#0F172A">Varus</text>
+  <text x="310" y="104" font-size="42" font-weight="800" letter-spacing="-1.6" fill="#2563EB">Core</text>
+
+  <!-- ── Tagline ── -->
+  <text x="177" y="130" font-size="13.5" font-weight="400" letter-spacing="0.1" fill="#94A3B8">AI Automation Systems  ·  Singapore</text>
+
+  <!-- ── Thin separator ── -->
+  <line x1="177" y1="145" x2="560" y2="145" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- ── Brand promise ── -->
+  <text x="177" y="163" font-size="11" font-weight="500" fill="#475569" letter-spacing="0.05">Reliable. Transparent. Built to last.</text>
+
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!--  PANEL 2 — Isolated mark, large                       -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <rect x="12" y="220" width="196" height="196" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.2"/>
+  <text x="32" y="244" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#94A3B8">ICON MARK</text>
+
+  <!-- Large blue square, centered in panel -->
+  <rect x="48" y="256" width="124" height="124" rx="18" fill="#2563EB"/>
+  <svg x="48" y="256" width="124" height="124" viewBox="0 0 200 200">
+    <path d="M100,18 C78,18 58,28 50,45 C43,41 33,52 38,66 C30,76 28,94 36,108 C38,120 44,134 55,142 C57,158 62,172 72,180 C82,188 93,185 98,175 L100,170 L102,175 C107,185 118,188 128,180 C138,172 143,158 145,142 C156,134 162,120 164,108 C172,94 170,76 162,66 C167,52 157,41 150,45 C142,28 122,18 100,18 Z" fill="white"/>
+    <ellipse cx="100" cy="124" rx="32" ry="44" fill="#2563EB"/>
+    <circle cx="66" cy="68" r="28" fill="white"/>
+    <circle cx="134" cy="68" r="28" fill="white"/>
+    <circle cx="70" cy="73" r="16" fill="#1D4ED8"/>
+    <circle cx="138" cy="73" r="16" fill="#1D4ED8"/>
+    <circle cx="62" cy="63" r="7" fill="white"/>
+    <circle cx="130" cy="63" r="7" fill="white"/>
+    <circle cx="52" cy="170" r="8" fill="white"/>
+    <circle cx="68" cy="180" r="8" fill="white"/>
+    <circle cx="86" cy="185" r="8" fill="white"/>
+    <circle cx="114" cy="185" r="8" fill="white"/>
+    <circle cx="132" cy="180" r="8" fill="white"/>
+    <circle cx="148" cy="170" r="8" fill="white"/>
+  </svg>
+
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!--  PANEL 3 — Dark background lockup                     -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <rect x="220" y="220" width="388" height="196" rx="10" fill="#0F172A"/>
+  <text x="240" y="244" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#334155">DARK VARIANT</text>
+
+  <!-- Mark on dark -->
+  <rect x="240" y="256" width="90" height="90" rx="13" fill="#2563EB"/>
+  <svg x="240" y="256" width="90" height="90" viewBox="0 0 200 200">
+    <path d="M100,18 C78,18 58,28 50,45 C43,41 33,52 38,66 C30,76 28,94 36,108 C38,120 44,134 55,142 C57,158 62,172 72,180 C82,188 93,185 98,175 L100,170 L102,175 C107,185 118,188 128,180 C138,172 143,158 145,142 C156,134 162,120 164,108 C172,94 170,76 162,66 C167,52 157,41 150,45 C142,28 122,18 100,18 Z" fill="white"/>
+    <ellipse cx="100" cy="124" rx="32" ry="44" fill="#2563EB"/>
+    <circle cx="66" cy="68" r="28" fill="white"/>
+    <circle cx="134" cy="68" r="28" fill="white"/>
+    <circle cx="70" cy="73" r="16" fill="#1D4ED8"/>
+    <circle cx="138" cy="73" r="16" fill="#1D4ED8"/>
+    <circle cx="62" cy="63" r="7" fill="white"/>
+    <circle cx="130" cy="63" r="7" fill="white"/>
+    <circle cx="52" cy="170" r="8" fill="white"/>
+    <circle cx="68" cy="180" r="8" fill="white"/>
+    <circle cx="86" cy="185" r="8" fill="white"/>
+    <circle cx="114" cy="185" r="8" fill="white"/>
+    <circle cx="132" cy="180" r="8" fill="white"/>
+    <circle cx="148" cy="170" r="8" fill="white"/>
+    <!-- Nostrils -->
+  </svg>
+
+  <!-- Wordmark on dark -->
+  <text x="344" y="300" font-size="30" font-weight="800" letter-spacing="-1.2" fill="#FFFFFF">Varus</text>
+  <text x="443" y="300" font-size="30" font-weight="800" letter-spacing="-1.2" fill="#60A5FA">Core</text>
+  <text x="344" y="322" font-size="11" font-weight="400" fill="#334155" letter-spacing="0.1">AI Automation Systems  ·  Singapore</text>
+
+  <!-- Separator -->
+  <line x1="344" y1="336" x2="585" y2="336" stroke="#1E293B" stroke-width="1"/>
+  <text x="344" y="352" font-size="10.5" font-weight="500" fill="#475569">Reliable. Transparent. Built to last.</text>
+
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!--  PANEL 4 — Colour palette + logo construction notes   -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <rect x="12" y="428" width="596" height="80" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.2"/>
+  <text x="32" y="450" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#94A3B8">BRAND COLOURS</text>
+
+  <!-- Swatch 1 — Primary blue -->
+  <rect x="32" y="458" width="36" height="36" rx="6" fill="#2563EB"/>
+  <text x="76" y="472" font-size="9.5" font-weight="600" fill="#0F172A">#2563EB</text>
+  <text x="76" y="486" font-size="8.5" font-weight="400" fill="#94A3B8">Primary / Mark</text>
+
+  <!-- Swatch 2 — Dark ink -->
+  <rect x="150" y="458" width="36" height="36" rx="6" fill="#0F172A"/>
+  <text x="194" y="472" font-size="9.5" font-weight="600" fill="#0F172A">#0F172A</text>
+  <text x="194" y="486" font-size="8.5" font-weight="400" fill="#94A3B8">Text / Dark bg</text>
+
+  <!-- Swatch 3 — Muted -->
+  <rect x="268" y="458" width="36" height="36" rx="6" fill="#475569"/>
+  <text x="312" y="472" font-size="9.5" font-weight="600" fill="#0F172A">#475569</text>
+  <text x="312" y="486" font-size="8.5" font-weight="400" fill="#94A3B8">Secondary text</text>
+
+  <!-- Swatch 4 — Soft accent -->
+  <rect x="386" y="458" width="36" height="36" rx="6" fill="#EFF6FF" stroke="#DBEAFE" stroke-width="1"/>
+  <text x="430" y="472" font-size="9.5" font-weight="600" fill="#0F172A">#EFF6FF</text>
+  <text x="430" y="486" font-size="8.5" font-weight="400" fill="#94A3B8">Accent wash</text>
+
+  <!-- Swatch 5 — White -->
+  <rect x="504" y="458" width="36" height="36" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="548" y="472" font-size="9.5" font-weight="600" fill="#0F172A">#FFFFFF</text>
+  <text x="548" y="486" font-size="8.5" font-weight="400" fill="#94A3B8">Background</text>
+
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!--  CONSTRUCTION NOTE (inside panel 2, below icon)       -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <text x="32" y="398" font-size="8" font-weight="500" fill="#94A3B8">Left arm: 24px wide</text>
+  <text x="32" y="410" font-size="8" font-weight="500" fill="#94A3B8">Right arm: 10px wide</text>
+  <text x="32" y="422" font-size="8" font-weight="500" fill="#94A3B8">Contrast ratio: 2.4 : 1</text>
+
+</svg>
