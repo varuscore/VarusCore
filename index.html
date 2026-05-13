@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VarusCore — AI Automation for Modern Businesses</title>
+  <meta name="description" content="VarusCore builds reliable AI automation systems that reduce manual work, streamline operations, and help businesses scale — without the complexity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #FFFFFF;
+      --bg-section: #F8FAFC;
+      --border: #E5E7EB;
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #94A3B8;
+      --accent: #2563EB;
+      --accent-hover: #1D4ED8;
+      --accent-soft: #EFF6FF;
+      --success: #10B981;
+      --radius: 10px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.07);
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── UTILITIES ─── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-section); }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .label-dot {
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; line-height: 1.12; letter-spacing: -0.03em; }
+    h2 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); font-weight: 700; line-height: 1.18; letter-spacing: -0.025em; }
+    h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
+
+    .text-secondary { color: var(--text-secondary); }
+    .text-muted { color: var(--text-muted); }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 13px 26px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      border: 1.5px solid var(--border);
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+    .btn-secondary:hover { background: var(--bg-section); }
+
+    /* ─── NAVBAR ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo-mark {
+      width: 40px; height: 40px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-logo-mark svg { width: 32px; height: 32px; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .nav-cta { display: flex; align-items: center; gap: 12px; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px; }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ─── HERO ─── */
+    #hero {
+      padding: 104px 0 88px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 28px;
+    }
+
+    .hero-tagline {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .hero-headline {
+      max-width: 760px;
+      margin: 0 auto 24px;
+    }
+
+    .hero-headline span { color: var(--accent); }
+
+    .hero-sub {
+      max-width: 560px;
+      margin: 0 auto 40px;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .hero-note span { color: var(--success); font-weight: 500; }
+
+    /* ─── TRUST BAR ─── */
+    #trust {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .trust-label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .trust-divider {
+      width: 1px;
+      height: 24px;
+      background: var(--border);
+    }
+
+    .trust-stats {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .trust-stat {
+      text-align: center;
+    }
+
+    .trust-stat-num {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .trust-stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .trust-badges {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .trust-badge-icon {
+      width: 20px; height: 20px;
+      color: var(--success);
+    }
+
+    /* ─── SERVICES ─── */
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-header p { margin-top: 14px; color: var(--text-secondary); font-size: 1.05rem; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .services-grid { grid-template-columns: 1fr; } }
+
+    .service-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { border-color: #C7D2FE; box-shadow: var(--shadow-md); }
+
+    .service-icon {
+      width: 44px; height: 44px;
+      background: var(--accent-soft);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .service-icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+    .service-card h3 { margin-bottom: 10px; }
+    .service-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
+
+    .service-tag {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    /* ─── HOW IT WORKS ─── */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(16.67% + 28px);
+      right: calc(16.67% + 28px);
+      height: 1px;
+      background: repeating-linear-gradient(90deg, var(--border) 0, var(--border) 6px, transparent 6px, transparent 12px);
+    }
+
+    @media (max-width: 700px) {
+      .steps-grid { grid-template-columns: 1fr; }
+      .steps-grid::before { display: none; }
+    }
+
+    .step {
+      padding: 0 32px;
+      text-align: center;
+    }
+
+    .step-num {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step h3 { margin-bottom: 10px; }
+    .step p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ─── CASE STUDIES ─── */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 700px) { .cases-grid { grid-template-columns: 1fr; } }
+
+    .case-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: box-shadow 0.2s;
+    }
+    .case-card:hover { box-shadow: var(--shadow-md); }
+
+    .case-industry {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .case-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+    .case-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px; }
+
+    .case-results {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .case-result {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-result-num {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .case-result-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+    .testimonial-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 14px;
+    }
+
+    .testimonial-stars span { color: #F59E0B; font-size: 14px; }
+
+    .testimonial-card blockquote {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+
+    .testimonial-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .testimonial-role {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ─── ABOUT ─── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .about-content h2 { margin-bottom: 18px; }
+    .about-content p { color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; font-size: 0.97rem; }
+
+    .about-values {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .about-value {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 20px;
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .about-value-icon {
+      width: 36px; height: 36px;
+      min-width: 36px;
+      background: var(--accent-soft);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-value-icon svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .about-value-text h4 { font-size: 0.92rem; font-weight: 600; margin-bottom: 3px; }
+    .about-value-text p { font-size: 0.84rem; color: var(--text-muted); margin: 0; }
+
+    .about-visual {
+      background: var(--bg-section);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .about-stat-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .about-stat-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .about-stat-bar {
+      height: 6px;
+      background: var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .about-stat-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 999px;
+      transition: width 1.2s ease;
+    }
+
+    /* ─── FAQ ─── */
+    .faq-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 22px 0;
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-family: var(--font);
+    }
+
+    .faq-icon {
+      width: 20px; height: 20px;
+      min-width: 20px;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+
+    .faq-answer {
+      display: none;
+      padding-bottom: 20px;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* ─── FINAL CTA ─── */
+    #cta {
+      background: var(--text-primary);
+      padding: 96px 0;
+      text-align: center;
+    }
+
+    #cta .label { background: rgba(37,99,235,0.15); color: #93C5FD; }
+    #cta h2 { color: #fff; margin-bottom: 18px; }
+    #cta p { color: #94A3B8; font-size: 1.05rem; max-width: 520px; margin: 0 auto 40px; line-height: 1.7; }
+
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 13px 26px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+    .btn-white:hover { background: #F1F5F9; }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #94A3B8;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      border: 1.5px solid #334155;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+    }
+    .btn-ghost:hover { background: #1E293B; color: #fff; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 48px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+      max-width: 260px;
+      line-height: 1.65;
+    }
+
+    .footer-links-group h4 {
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .footer-links-group a {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: color 0.15s;
+    }
+    .footer-links-group a:hover { color: var(--text-primary); }
+
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-bottom-links a:hover { color: var(--text-secondary); }
+
+    /* ─── SOLUTIONS (2 cards) ─── */
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 700px) { .solutions-grid { grid-template-columns: 1fr; } }
+
+    .solution-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      position: relative;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .solution-card:hover { border-color: #C7D2FE; box-shadow: var(--shadow-md); }
+    .solution-card.featured { border-color: var(--accent); }
+
+    .solution-badge {
+      position: absolute;
+      top: -12px; right: 24px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .solution-icon {
+      width: 52px; height: 52px;
+      background: var(--accent-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .solution-icon svg { width: 26px; height: 26px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+    .solution-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+    .solution-card > p { font-size: 0.93rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 24px; }
+
+    .solution-features {
+      list-style: none;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .solution-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .solution-features li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .solution-price {
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .solution-price-from { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 2px; }
+    .solution-price-num { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); line-height: 1; }
+    .solution-price-num span { font-size: 0.85rem; font-weight: 500; color: var(--text-muted); }
+
+    /* ─── PRICING CALCULATOR ─── */
+    .calc-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .calc-top {
+      padding: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .calc-row { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; }
+    .calc-row:last-child { margin-bottom: 0; }
+
+    .calc-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 12px;
+    }
+
+    .calc-toggle-group { display: flex; gap: 8px; flex-wrap: wrap; }
+    .calc-toggle-btn {
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border);
+      background: var(--bg);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-family: var(--font);
+      transition: all 0.15s;
+    }
+    .calc-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .calc-toggle-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .calc-bottom {
+      padding: 32px;
+      background: var(--bg-section);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 600px) { .calc-bottom { grid-template-columns: 1fr; } }
+
+    .calc-result {
+      text-align: center;
+      padding: 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    .calc-result-label { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px; }
+    .calc-result-val { font-size: 1.5rem; font-weight: 800; color: var(--text-primary); line-height: 1; }
+    .calc-result-val.savings { color: var(--success); }
+    .calc-result-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; }
+    .calc-disclaimer { font-size: 0.76rem; color: var(--text-muted); text-align: center; margin-top: 16px; padding: 0 32px 20px; }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── CONTACT MODAL ─── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15,23,42,0.5);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 480px;
+      width: 100%;
+      border: 1.5px solid var(--border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    .modal-close {
+      float: right;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--text-muted);
+      line-height: 1;
+      margin-top: -8px;
+    }
+
+    .modal h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .modal p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 28px; }
+
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 6px; }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      font-size: 0.92rem;
+      font-family: var(--font);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg);
+      color: var(--text-primary);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--accent); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+
+    .form-submit {
+      width: 100%;
+      padding: 13px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font);
+      transition: background 0.18s;
+    }
+    .form-submit:hover { background: var(--accent-hover); }
+    .form-note { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-mark">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Frog body — wide flat ellipse -->
+            <ellipse cx="16" cy="23" rx="13" ry="8" fill="white"/>
+            <!-- Left eye — protruding round bulb -->
+            <circle cx="8.5" cy="11" r="6.5" fill="white"/>
+            <!-- Right eye -->
+            <circle cx="23.5" cy="11" r="6.5" fill="white"/>
+            <!-- Left pupil (forward-facing) -->
+            <circle cx="9.5" cy="11.5" r="3" fill="#1D4ED8"/>
+            <!-- Right pupil -->
+            <circle cx="24.5" cy="11.5" r="3" fill="#1D4ED8"/>
+            <!-- Left pupil shine -->
+            <circle cx="10.5" cy="10" r="1" fill="white"/>
+            <!-- Right pupil shine -->
+            <circle cx="25.5" cy="10" r="1" fill="white"/>
+            <!-- Nostril left -->
+            <circle cx="13.5" cy="21" r="1.1" fill="#2563EB"/>
+            <!-- Nostril right -->
+            <circle cx="18.5" cy="21" r="1.1" fill="#2563EB"/>
+            <!-- Smile -->
+            <path d="M 9,27 Q 16,31 23,27" stroke="#2563EB" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        VarusCore
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#case-studies">Results</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="mailto:varuscore@gmail.com" class="btn-secondary">varuscore@gmail.com</a>
+        <button class="btn-primary" onclick="openModal()">Book a Call</button>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-eyebrow reveal">
+      <span class="label"><span class="label-dot"></span>AI Automation · Singapore</span>
+    </div>
+    <p class="hero-tagline reveal">Convert more patients. Reduce missed calls. Automate your front desk.</p>
+    <h1 class="hero-headline reveal">
+      Stop losing patients because<br /><span>no one picks up the phone.</span>
+    </h1>
+    <p class="hero-sub reveal">
+      We help dental and medical clinics install a 24/7 AI employee that answers enquiries, books appointments, and follows up automatically — so your clinic never misses a lead again.
+    </p>
+    <div class="hero-actions reveal">
+      <button class="btn-primary" onclick="openModal()">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Book a Discovery Call
+      </button>
+      <a href="#how-it-works" class="btn-secondary">See how it works →</a>
+    </div>
+    <p class="hero-note reveal"><span>✓ No commitment.</span> &nbsp;30-minute call. We listen first.</p>
+  </div>
+</section>
+
+<!-- ─── TRUST BAR ─── -->
+<section id="trust">
+  <div class="container">
+    <div class="trust-inner">
+      <span class="trust-label">Built for dental & medical clinics</span>
+      <div class="trust-divider"></div>
+      <div class="trust-stats">
+        <div class="trust-stat">
+          <span class="trust-stat-num">40+</span>
+          <span class="trust-stat-label">Hours saved / month</span>
+        </div>
+        <div class="trust-stat">
+          <span class="trust-stat-num">60%</span>
+          <span class="trust-stat-label">Reduction in no-shows</span>
+        </div>
+        <div class="trust-stat">
+          <span class="trust-stat-num">3×</span>
+          <span class="trust-stat-label">Faster patient follow-up</span>
+        </div>
+        <div class="trust-stat">
+          <span class="trust-stat-num">100%</span>
+          <span class="trust-stat-label">Custom-built solutions</span>
+        </div>
+      </div>
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          No-code handoff
+        </div>
+        <div class="trust-badge">
+          <svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          Singapore-based
+        </div>
+        <div class="trust-badge">
+          <svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          Ongoing support
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SOLUTIONS ─── -->
+<section id="services" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label"><span class="label-dot"></span>Our solutions</span>
+      <h2>The lead who doesn't hear back<br />in an hour goes to your competitor.</h2>
+      <p>Speed of response is the single biggest driver of patient conversion. Here's how we fix that for your clinic — automatically.</p>
+    </div>
+
+    <!-- Speed insight callout -->
+    <div class="reveal" style="max-width:740px; margin:0 auto 40px; background:#FFF7ED; border:1px solid #FED7AA; border-radius:12px; padding:20px 24px; display:flex; align-items:flex-start; gap:16px;">
+      <span style="font-size:1.6rem; line-height:1;">⏱</span>
+      <div>
+        <div style="font-weight:700; color:#92400E; font-size:0.95rem; margin-bottom:4px;">The 1-hour rule — and why most clinics lose.</div>
+        <div style="font-size:0.88rem; color:#78350F; line-height:1.6;">A patient messages your clinic enquiring about an appointment. Your admin sees it 45 minutes later — between calls, between patients. By then, the patient has already messaged two other clinics. The one that replied in 3 minutes got the booking. <strong>Your AI replies in seconds. Every time. Day or night.</strong></div>
+      </div>
+    </div>
+
+    <div class="solutions-grid">
+
+      <!-- CARD 1: WhatsApp AI -->
+      <div class="solution-card reveal">
+        <div class="solution-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3>WhatsApp AI</h3>
+        <p>Your clinic's first responder — active 24/7 on the channel patients already use. Every enquiry gets an instant reply. No more leads left on read while your admin is with a patient.</p>
+        <ul class="solution-features">
+          <li>Replies to patient messages in seconds — hours, fees, directions, services</li>
+          <li>Books appointments and handles rescheduling without staff lifting a finger</li>
+          <li>Sends automated reminders — reduces no-shows by up to 60%</li>
+          <li>Follows up post-visit for rebooking and care reminders</li>
+          <li>Active evenings, weekends, and public holidays</li>
+        </ul>
+        <div class="solution-price" style="margin-top:auto; padding-top:20px; border-top:1px solid var(--border);">
+          <div class="solution-price-from" style="font-size:0.82rem; color:var(--text-muted); margin-bottom:2px;">One-time setup from</div>
+          <div class="solution-price-num">$1,200</div>
+          <div style="font-size:0.78rem; color:var(--text-muted); margin-top:4px;">Optional monthly maintenance available</div>
+        </div>
+      </div>
+
+      <!-- CARD 2: AI Employee -->
+      <div class="solution-card featured reveal">
+        <div class="solution-badge">Most Complete</div>
+        <div class="solution-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>AI Employee <span style="font-size:0.75rem; font-weight:600; color:var(--accent); background:#EFF6FF; padding:2px 8px; border-radius:20px; vertical-align:middle;">24/7</span></h3>
+        <p>Think of it as hiring a full-time front desk staff member — one that never calls in sick, never misses a message, and handles your entire patient communication workflow while you focus on clinical work.</p>
+        <ul class="solution-features">
+          <li>Everything in WhatsApp AI, plus multi-channel coverage</li>
+          <li>Captures leads from your website, Instagram, and Facebook — instantly</li>
+          <li>Proactive patient recall — prompts patients due for their next visit</li>
+          <li>Handles insurance queries, MC requests, and clinical FAQs</li>
+          <li>Admin workflows: daily summaries, data capture, follow-up sequences</li>
+        </ul>
+        <div class="solution-price" style="margin-top:auto; padding-top:20px; border-top:1px solid var(--border);">
+          <div class="solution-price-from" style="font-size:0.82rem; color:var(--text-muted); margin-bottom:2px;">One-time setup from</div>
+          <div class="solution-price-num">$2,200</div>
+          <div style="font-size:0.78rem; color:var(--text-muted); margin-top:4px;">Optional monthly maintenance available</div>
+        </div>
+      </div>
+
+    </div>
+    <p style="text-align:center; margin-top:24px; font-size:0.85rem; color:var(--text-muted);">Both solutions are custom-built for your clinic. Use the pricing calculator below for a full estimate — or just bring your questions to the discovery call.</p>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section id="how-it-works" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label"><span class="label-dot"></span>Our process</span>
+      <h2>Live in as little as 1 week.<br />Never months.</h2>
+      <p>Three steps. No tech knowledge required. We handle everything from build to handover.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Discovery Call</h3>
+        <p>30 minutes. We learn exactly how your clinic operates — what your staff spends time on, where patients fall through the cracks, and what's costing you money every week.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>Customise AI Solutions for You</h3>
+        <p>We design a system built around your clinic's specific workflows, patient communication style, and existing tools — not a template. You approve everything before we build a single thing.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>Go Live. See Results.</h3>
+        <p>We deploy, test, and hand over with full guidance. Your team doesn't need to do anything technical. Smaller projects go live within 1 week — larger builds within 3 weeks. Most clinics see fewer no-shows and reduced admin load from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PRICING CALCULATOR ─── -->
+<section id="pricing" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label"><span class="label-dot"></span>Pricing</span>
+      <h2>Simple, transparent pricing.<br />No hidden fees.</h2>
+      <p>Get an instant estimate based on your clinic size and what you need. Exact quotes provided on your discovery call.</p>
+    </div>
+
+    <div class="calc-wrapper reveal">
+      <div class="calc-top">
+        <div class="calc-row">
+          <div style="flex:1; min-width:200px;">
+            <div class="calc-label">Select your solution</div>
+            <div class="calc-toggle-group">
+              <button class="calc-toggle-btn active" onclick="calcSelect('solution', 'whatsapp', this)">WhatsApp AI</button>
+              <button class="calc-toggle-btn" onclick="calcSelect('solution', 'employee', this)">AI Employee</button>
+              <button class="calc-toggle-btn" onclick="calcSelect('solution', 'both', this)">Both (save 15%)</button>
+            </div>
+          </div>
+        </div>
+        <div class="calc-row">
+          <div style="flex:1; min-width:200px;">
+            <div class="calc-label">Clinic size</div>
+            <div class="calc-toggle-group">
+              <button class="calc-toggle-btn active" onclick="calcSelect('size', 'small', this)">Small (1–2 chairs)</button>
+              <button class="calc-toggle-btn" onclick="calcSelect('size', 'medium', this)">Medium (3–5 chairs)</button>
+              <button class="calc-toggle-btn" onclick="calcSelect('size', 'large', this)">Large (6+ chairs)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calc-bottom">
+        <div class="calc-result">
+          <div class="calc-result-label">One-time setup</div>
+          <div class="calc-result-val" id="calc-setup">$1,200</div>
+          <div class="calc-result-sub">paid once</div>
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Optional maintenance</div>
+          <div class="calc-result-val" id="calc-monthly">$200–$300</div>
+          <div class="calc-result-sub">per month, if needed</div>
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Est. monthly savings</div>
+          <div class="calc-result-val savings" id="calc-savings">$600–$1,200</div>
+          <div class="calc-result-sub">admin + no-shows</div>
+        </div>
+      </div>
+      <p class="calc-disclaimer">Estimates based on typical Singapore dental/medical clinic benchmarks. Actual savings depend on clinic volume, no-show rate, and staff costs. Final pricing confirmed on your discovery call.</p>
+    </div>
+
+    <!-- ROI note -->
+    <div style="max-width:760px; margin:24px auto 0; display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; text-align:center;">
+      <div style="padding:20px; background:var(--bg); border:1px solid var(--border); border-radius:10px;">
+        <div style="font-size:1.4rem; font-weight:800; color:var(--accent); margin-bottom:4px;">~$3,000</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">Average monthly receptionist salary in Singapore</div>
+      </div>
+      <div style="padding:20px; background:var(--bg); border:1px solid var(--border); border-radius:10px;">
+        <div style="font-size:1.4rem; font-weight:800; color:var(--success); margin-bottom:4px;">From $1,200</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">One-time setup cost — yours to keep, no recurring lock-in</div>
+      </div>
+      <div style="padding:20px; background:var(--bg); border:1px solid var(--border); border-radius:10px;">
+        <div style="font-size:1.4rem; font-weight:800; color:var(--text-primary); margin-bottom:4px;">30 days</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">Typical time to see measurable ROI after going live</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // ─── PRICING CALCULATOR ───
+  const calcData = {
+    whatsapp: {
+      setup:   { small: '$1,200',  medium: '$1,600',  large: '$2,200'  },
+      monthly: { small: '$200–$300', medium: '$300–$400', large: '$400–$550' },
+      savings: { small: '$600–$1,200', medium: '$1,000–$2,000', large: '$1,800–$3,500' }
+    },
+    employee: {
+      setup:   { small: '$2,200',  medium: '$3,000',  large: '$4,200'  },
+      monthly: { small: '$350–$500', medium: '$500–$700', large: '$700–$1,000' },
+      savings: { small: '$1,000–$2,000', medium: '$1,800–$3,500', large: '$3,000–$5,500' }
+    },
+    both: {
+      setup:   { small: '$3,000',  medium: '$4,000',  large: '$5,500'  },
+      monthly: { small: '$450–$650', medium: '$650–$900', large: '$900–$1,300' },
+      savings: { small: '$1,400–$2,800', medium: '$2,500–$4,500', large: '$4,000–$7,000' }
+    }
+  };
+
+  let calcState = { solution: 'whatsapp', size: 'small' };
+
+  function calcSelect(type, value, btn) {
+    calcState[type] = value;
+    btn.closest('.calc-toggle-group').querySelectorAll('.calc-toggle-btn')
+       .forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    updateCalc();
+  }
+
+  function updateCalc() {
+    const row = calcData[calcState.solution];
+    document.getElementById('calc-setup').textContent   = row.setup[calcState.size];
+    document.getElementById('calc-monthly').textContent = row.monthly[calcState.size];
+    document.getElementById('calc-savings').textContent = row.savings[calcState.size];
+  }
+</script>
+
+<!-- ─── CASE STUDIES ─── -->
+<section id="case-studies" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label"><span class="label-dot"></span>Real outcomes</span>
+      <h2>What clinics like yours<br />have already achieved.</h2>
+      <p>These are the kinds of results Singapore dental and medical clinics see. We'll scope what's realistic for yours on the call.</p>
+    </div>
+    <div class="cases-grid">
+
+      <div class="case-card reveal">
+        <p class="case-industry">🦷 Dental Clinic · Singapore</p>
+        <h3>No-shows gone. 8 hours freed up. Every week.</h3>
+        <p>A dental clinic was losing $800–$1,200/month to empty slots and spending Monday mornings on the phone chasing patients. Now automated WhatsApp reminders go out at the right time, patients reschedule themselves, and staff do nothing.</p>
+        <div class="case-results">
+          <div class="case-result">
+            <span class="case-result-num">62%</span>
+            <span class="case-result-label">Drop in no-shows</span>
+          </div>
+          <div class="case-result">
+            <span class="case-result-num">8 hrs</span>
+            <span class="case-result-label">Saved per week</span>
+          </div>
+          <div class="case-result">
+            <span class="case-result-num">1 week</span>
+            <span class="case-result-label">To go live</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <p class="case-industry">🏥 GP Clinic · Singapore</p>
+        <h3>Same team. 80% fewer messages to handle daily.</h3>
+        <p>A GP clinic's admin staff were drowning in repetitive WhatsApp messages — hours, fees, directions, the same questions every day. An AI now answers instantly, 24/7. The same team now focuses entirely on patient care, not their phones.</p>
+        <div class="case-results">
+          <div class="case-result">
+            <span class="case-result-num">80%</span>
+            <span class="case-result-label">Enquiries automated</span>
+          </div>
+          <div class="case-result">
+            <span class="case-result-num">24/7</span>
+            <span class="case-result-label">Always-on responses</span>
+          </div>
+          <div class="case-result">
+            <span class="case-result-num">↑40%</span>
+            <span class="case-result-label">Patient satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <p class="case-industry">🛍️ Retail SME · Singapore</p>
+        <h3>Repeat customers up 3× with zero extra ad spend.</h3>
+        <p>A retail business had no system for staying in touch with past buyers. A simple post-purchase automation — the right message at the right time — tripled their repeat purchase rate. No extra staff, no extra marketing budget.</p>
+        <div class="case-results">
+          <div class="case-result">
+            <span class="case-result-num">3×</span>
+            <span class="case-result-label">Repeat purchase rate</span>
+          </div>
+          <div class="case-result">
+            <span class="case-result-num">$0</span>
+            <span class="case-result-label">Extra ad spend</span>
+          </div>
+          <div class="case-result">
+            <span class="case-result-num">2 weeks</span>
+            <span class="case-result-label">Time to deploy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <p class="case-industry">🧴 Aesthetic Clinic · Singapore</p>
+        <h3>From Instagram DMs to a fully-booked calendar in 4 weeks.</h3>
+        <p>An aesthetic clinic was posting on Instagram daily but losing leads because nobody replied fast enough. An automated intake flow now captures every interested lead and books consultations around the clock — no manual follow-up needed.</p>
+        <div class="case-results">
+          <div class="case-result">
+            <span class="case-result-num">5×</span>
+            <span class="case-result-label">Lead conversion</span>
+          </div>
+          <div class="case-result">
+            <span class="case-result-num">Full</span>
+            <span class="case-result-label">Calendar within 4 weeks</span>
+          </div>
+          <div class="case-result">
+            <span class="case-result-num">0</span>
+            <span class="case-result-label">Manual follow-up calls</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── ABOUT ─── -->
+<section id="about" class="section section-alt">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content reveal">
+        <span class="label"><span class="label-dot"></span>Who we are</span>
+        <h2>We're not a software company.<br />We're a results company.</h2>
+        <p>Running a small business in Singapore is genuinely hard. Rent is high, staff cost $3,000–$5,000 per head, and customers expect instant replies at all hours. Most owners end up being the doctor, the manager, and the receptionist — all at once.</p>
+        <p>VarusCore exists to fix that. We build practical AI systems that reduce your costs and increase revenue — not flashy demos or generic SaaS tools. We only take on projects where we're confident we can deliver real results. If we can't, we tell you upfront.</p>
+        <div class="about-values">
+          <div class="about-value">
+            <div class="about-value-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="about-value-text">
+              <h4>No fluff</h4>
+              <p>We skip the jargon. Every conversation is direct and specific to your business.</p>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div class="about-value-text">
+              <h4>Fast ROI</h4>
+              <p>Most clients see a measurable return within 30 days. We build for results, not show.</p>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div class="about-value-text">
+              <h4>Local and reachable</h4>
+              <p>Singapore-based. Reach us on WhatsApp. If something breaks, we fix it fast.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <h3 style="font-size:1rem; margin-bottom:6px;">Where AI saves the most time</h3>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:24px;">Typical results across our clients</p>
+        <div class="about-stat-row">
+          <div class="about-stat-label"><span>Appointment reminders</span><span>94%</span></div>
+          <div class="about-stat-bar"><div class="about-stat-fill" style="width:94%"></div></div>
+        </div>
+        <div class="about-stat-row">
+          <div class="about-stat-label"><span>Patient enquiry handling</span><span>82%</span></div>
+          <div class="about-stat-bar"><div class="about-stat-fill" style="width:82%"></div></div>
+        </div>
+        <div class="about-stat-row">
+          <div class="about-stat-label"><span>Lead follow-up workflows</span><span>76%</span></div>
+          <div class="about-stat-bar"><div class="about-stat-fill" style="width:76%"></div></div>
+        </div>
+        <div class="about-stat-row">
+          <div class="about-stat-label"><span>Admin data entry</span><span>68%</span></div>
+          <div class="about-stat-bar"><div class="about-stat-fill" style="width:68%"></div></div>
+        </div>
+        <div class="about-stat-row">
+          <div class="about-stat-label"><span>Post-visit follow-ups</span><span>88%</span></div>
+          <div class="about-stat-bar"><div class="about-stat-fill" style="width:88%"></div></div>
+        </div>
+        <div style="margin-top:24px; padding-top:20px; border-top:1px solid var(--border);">
+          <p style="font-size:0.82rem; color:var(--text-muted); line-height:1.6;">These are the percentages of tasks that clients automated after working with VarusCore — measured 60 days post-deployment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label"><span class="label-dot"></span>Common questions</span>
+      <h2>Questions from clinic owners,<br />answered plainly.</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Will this work with our current clinic system?
+          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Most likely yes. We work with WhatsApp Business API, common clinic management software (Clinic Plus, NovaCare, etc.), Google Calendar, and many others. On the discovery call, we'll check compatibility before any commitment. If it doesn't connect, we'll tell you upfront.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          My staff aren't tech-savvy. Will they be able to use this?
+          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Yes. The whole point is that your team shouldn't need to do anything extra. The AI handles patient conversations automatically — your staff just log into their regular tools, exactly as before. We train your team during handover and stay available after.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How quickly will we see results?
+          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Most clinics notice fewer no-shows within the first 1–2 weeks of the reminder system going live. Admin time reductions happen immediately — the AI starts answering patient messages from day one. Full ROI typically shows within 30 days.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What does the monthly fee cover?
+          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">The monthly retainer covers platform costs (WhatsApp API, automation tools), ongoing maintenance, and our support. There are no surprise charges. Everything is broken down clearly before you sign anything — we show you exactly what you're paying for and why.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What if the AI says something wrong to a patient?
+          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">The AI only answers within the scope of what we configure it to know — clinic hours, fees, services, and appointment logistics. Anything outside that is routed to your staff. Clinical advice is never given by the AI. We test extensively before going live and tune it based on your real patient conversations.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How long does setup take?
+          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Smaller projects like WhatsApp AI are typically live within 1 week. Larger builds like AI Employee can take up to 3 weeks depending on scope. We move fast because we know every week of delay is another week of missed leads and admin costs.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINAL CTA ─── -->
+<section id="cta">
+  <div class="container">
+    <span class="label"><span class="label-dot"></span>Get started</span>
+    <h2>Your clinic is losing money<br />to admin that AI can handle.</h2>
+    <p>Book a free 30-minute discovery call. We'll map out exactly what your clinic needs, what it costs, and what you'll save — before you commit to anything.</p>
+    <div class="cta-actions">
+      <button class="btn-white" onclick="openModal()">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Book a Discovery Call
+      </button>
+      <a href="mailto:varuscore@gmail.com" class="btn-ghost">varuscore@gmail.com →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="margin-bottom:12px; display:inline-flex;">
+          <div class="nav-logo-mark">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="16" cy="23" rx="13" ry="8" fill="white"/>
+              <circle cx="8.5" cy="11" r="6.5" fill="white"/>
+              <circle cx="23.5" cy="11" r="6.5" fill="white"/>
+              <circle cx="9.5" cy="11.5" r="3" fill="#1D4ED8"/>
+              <circle cx="24.5" cy="11.5" r="3" fill="#1D4ED8"/>
+              <circle cx="10.5" cy="10" r="1" fill="white"/>
+              <circle cx="25.5" cy="10" r="1" fill="white"/>
+              <circle cx="13.5" cy="21" r="1.1" fill="#2563EB"/>
+              <circle cx="18.5" cy="21" r="1.1" fill="#2563EB"/>
+              <path d="M 9,27 Q 16,31 23,27" stroke="#2563EB" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          VarusCore
+        </a>
+        <p>AI automation systems built for real businesses. Reliable, practical, and transparent — based in Singapore.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Company</h4>
+        <a href="#about">About us</a>
+        <a href="#services">Services</a>
+        <a href="#case-studies">Results</a>
+        <a href="mailto:varuscore@gmail.com">Contact</a>
+      </div>
+      <div class="footer-links-group">
+        <h4>Solutions</h4>
+        <a href="#services">WhatsApp AI</a>
+        <a href="#services">AI Employee</a>
+        <a href="#pricing">Pricing Calculator</a>
+        <a href="#case-studies">Results</a>
+      </div>
+      <div class="footer-links-group">
+        <h4>Contact</h4>
+        <a href="mailto:varuscore@gmail.com">varuscore@gmail.com</a>
+        <a href="#">Singapore</a>
+        <a href="#" onclick="openModal(); return false;">Book a Call</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 VarusCore. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── CONTACT MODAL ─── -->
+<div class="modal-overlay" id="contactModal" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3>Book a Discovery Call</h3>
+    <p>Tell us about your clinic and we'll reach out to schedule a 30-minute call — no commitment, no hard sell.</p>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="e.g. Dr. Jane Tan" required />
+      </div>
+      <div class="form-group">
+        <label>Business Name</label>
+        <input type="text" placeholder="e.g. Bright Smile Dental" required />
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="you@yourbusiness.com" required />
+      </div>
+      <div class="form-group">
+        <label>Phone Number (WhatsApp preferred)</label>
+        <input type="tel" placeholder="+65 9123 4567" />
+      </div>
+      <div class="form-group">
+        <label>Type of Business</label>
+        <select>
+          <option value="">Select your industry</option>
+          <option>Dental Clinic</option>
+          <option>Medical / GP Clinic</option>
+          <option>Aesthetic Clinic</option>
+          <option>Retail / E-commerce</option>
+          <option>F&amp;B</option>
+          <option>Professional Services</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tell us about your business <span style="color:var(--text-muted); font-weight:400;">(briefly)</span></label>
+        <textarea placeholder="e.g. We're a 3-chair dental clinic in Toa Payoh. We run about 30 appointments a day and have 2 full-time staff..." style="min-height:72px;"></textarea>
+      </div>
+      <div class="form-group">
+        <label>What's eating most of your time right now?</label>
+        <textarea placeholder="e.g. Our admin spends 3 hours a day on WhatsApp answering the same questions, and we still get no-shows every week..."></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send My Request →</button>
+      <p class="form-note">We'll reply within 1 business day. No spam, ever.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+  // ─── MODAL ───
+  function openModal() {
+    document.getElementById('contactModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('contactModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('contactModal')) closeModal();
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Sent! We\'ll be in touch soon.';
+    btn.style.background = '#10B981';
+    btn.disabled = true;
+    setTimeout(closeModal, 2200);
+  }
+
+  // ─── SCROLL REVEAL ───
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+
+  // ─── FAQ ───
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ─── MOBILE MENU ───
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    const cta = document.querySelector('.nav-cta');
+    if (links.style.display === 'flex') {
+      links.style.display = '';
+      cta.style.display = '';
+    } else {
+      links.style.cssText = 'display:flex; flex-direction:column; position:fixed; top:64px; left:0; right:0; background:#fff; padding:24px; border-bottom:1px solid #E5E7EB; gap:16px; z-index:99;';
+      cta.style.cssText = 'display:flex; flex-direction:column; position:fixed; top:' + (64 + links.offsetHeight) + 'px; left:0; right:0; background:#fff; padding:0 24px 24px; z-index:99;';
+    }
+  }
+
+  // ─── SMOOTH CLOSE NAV ON LINK CLICK ───
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      const links = document.querySelector('.nav-links');
+      const cta = document.querySelector('.nav-cta');
+      links.style.cssText = '';
+      cta.style.cssText = '';
+    });
+  });
+
+  // ─── KEYBOARD CLOSE MODAL ───
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>
