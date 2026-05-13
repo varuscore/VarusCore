@@ -597,6 +597,176 @@
       transition: width 1.2s ease;
     }
 
+    /* ─── GROWTH & OPTIMISATION LAYER ─── */
+    .growth-card {
+      background: #0F172A;
+      border-radius: 20px;
+      padding: 52px 48px;
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .growth-card::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .growth-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37,99,235,0.2);
+      color: #93C5FD;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(37,99,235,0.35);
+      margin-bottom: 20px;
+    }
+    .growth-headline {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .growth-sub {
+      font-size: 0.95rem;
+      color: #94A3B8;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 640px;
+    }
+    .growth-tagline {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #60A5FA;
+      border-left: 3px solid #2563EB;
+      padding-left: 14px;
+      margin-bottom: 36px;
+      line-height: 1.5;
+    }
+    .growth-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    @media (max-width: 640px) { .growth-compare { grid-template-columns: 1fr; } }
+    .growth-compare-col {
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+    .growth-compare-col.without {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .growth-compare-col.with {
+      background: rgba(37,99,235,0.12);
+      border: 1px solid rgba(37,99,235,0.3);
+    }
+    .growth-compare-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .growth-compare-col.without .growth-compare-label { color: #64748B; }
+    .growth-compare-col.with .growth-compare-label { color: #60A5FA; }
+    .growth-compare-col p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #CBD5E1;
+    }
+    .growth-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 28px;
+    }
+    .growth-features-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      color: #64748B;
+      margin-bottom: 16px;
+    }
+    .growth-features {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+      margin-bottom: 36px;
+    }
+    @media (max-width: 640px) { .growth-features { grid-template-columns: 1fr; } }
+    .growth-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: #CBD5E1;
+      line-height: 1.45;
+    }
+    .growth-features li::before {
+      content: '✓';
+      color: #34D399;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .growth-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .growth-price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .growth-price span { font-size: 1rem; font-weight: 500; color: #94A3B8; }
+    .growth-roi {
+      font-size: 0.82rem;
+      color: #34D399;
+      margin-bottom: 6px;
+    }
+    .growth-popular {
+      font-size: 0.78rem;
+      color: #60A5FA;
+      font-weight: 600;
+    }
+    .btn-growth {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #2563EB;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-growth:hover { background: #1D4ED8; transform: translateY(-1px); }
+
     /* ─── FAQ ─── */
     .faq-list {
       max-width: 700px;
@@ -1007,33 +1177,39 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">
         <div class="nav-logo-mark">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Frog body — wide flat ellipse -->
-            <ellipse cx="16" cy="23" rx="13" ry="8" fill="white"/>
-            <!-- Left eye — protruding round bulb -->
-            <circle cx="8.5" cy="11" r="6.5" fill="white"/>
-            <!-- Right eye -->
-            <circle cx="23.5" cy="11" r="6.5" fill="white"/>
-            <!-- Left pupil (forward-facing) -->
-            <circle cx="9.5" cy="11.5" r="3" fill="#1D4ED8"/>
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <!-- Body: front-facing frog silhouette (white on blue bg) -->
+            <path d="M16,2 C12,2 8.5,4 7,7.5 C5.5,7 3.5,9.5 4.5,12.5 C3,15 3,19 5.5,22 C6,25 7.5,28 10,29.5 C12,30.5 13.5,29.5 14.5,27.5 L16,26 L17.5,27.5 C18.5,29.5 20,30.5 22,29.5 C24.5,28 26,25 26.5,22 C29,19 29,15 27.5,12.5 C28.5,9.5 26.5,7 25,7.5 C23.5,4 20,2 16,2 Z" fill="white"/>
+            <!-- Belly (blue cutout effect) -->
+            <ellipse cx="16" cy="19.5" rx="4.5" ry="6" fill="#2563EB"/>
+            <!-- Left eye sclera -->
+            <circle cx="10" cy="11" r="4" fill="white"/>
+            <!-- Right eye sclera -->
+            <circle cx="22" cy="11" r="4" fill="white"/>
+            <!-- Left pupil -->
+            <circle cx="10.5" cy="11.5" r="2.2" fill="#1D4ED8"/>
             <!-- Right pupil -->
-            <circle cx="24.5" cy="11.5" r="3" fill="#1D4ED8"/>
-            <!-- Left pupil shine -->
-            <circle cx="10.5" cy="10" r="1" fill="white"/>
-            <!-- Right pupil shine -->
-            <circle cx="25.5" cy="10" r="1" fill="white"/>
-            <!-- Nostril left -->
-            <circle cx="13.5" cy="21" r="1.1" fill="#2563EB"/>
-            <!-- Nostril right -->
-            <circle cx="18.5" cy="21" r="1.1" fill="#2563EB"/>
-            <!-- Smile -->
-            <path d="M 9,27 Q 16,31 23,27" stroke="#2563EB" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <circle cx="22.5" cy="11.5" r="2.2" fill="#1D4ED8"/>
+            <!-- Left shine -->
+            <circle cx="9.4" cy="10.4" r="0.9" fill="white"/>
+            <!-- Right shine -->
+            <circle cx="21.4" cy="10.4" r="0.9" fill="white"/>
+            <!-- Toe pads (left) -->
+            <circle cx="8" cy="27.5" r="1.2" fill="white"/>
+            <circle cx="11" cy="29" r="1.2" fill="white"/>
+            <circle cx="14" cy="29.5" r="1.2" fill="white"/>
+            <!-- Toe pads (right) -->
+            <circle cx="18" cy="29.5" r="1.2" fill="white"/>
+            <circle cx="21" cy="29" r="1.2" fill="white"/>
+            <circle cx="24" cy="27.5" r="1.2" fill="white"/>
           </svg>
         </div>
         VarusCore
       </a>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
+        <li><a href="#services">AI Employee</a></li>
+        <li><a href="#growth">Growth Add-On</a></li>
+        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#case-studies">Results</a></li>
         <li><a href="#about">About</a></li>
@@ -1119,67 +1295,57 @@
 <section id="services" class="section section-alt">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label"><span class="label-dot"></span>Our solutions</span>
-      <h2>The lead who doesn't hear back<br />in an hour goes to your competitor.</h2>
-      <p>Speed of response is the single biggest driver of patient conversion. Here's how we fix that for your clinic — automatically.</p>
+      <span class="label"><span class="label-dot"></span>Our solution</span>
+      <h2>Speed of response is the<br />difference between a booking and a loss.</h2>
+      <p>Research on lead response times consistently shows that the faster you reply, the higher your chance of converting. We install a system that replies instantly — every time.</p>
     </div>
 
     <!-- Speed insight callout -->
     <div class="reveal" style="max-width:740px; margin:0 auto 40px; background:#FFF7ED; border:1px solid #FED7AA; border-radius:12px; padding:20px 24px; display:flex; align-items:flex-start; gap:16px;">
       <span style="font-size:1.6rem; line-height:1;">⏱</span>
       <div>
-        <div style="font-weight:700; color:#92400E; font-size:0.95rem; margin-bottom:4px;">The 1-hour rule — and why most clinics lose.</div>
-        <div style="font-size:0.88rem; color:#78350F; line-height:1.6;">A patient messages your clinic enquiring about an appointment. Your admin sees it 45 minutes later — between calls, between patients. By then, the patient has already messaged two other clinics. The one that replied in 3 minutes got the booking. <strong>Your AI replies in seconds. Every time. Day or night.</strong></div>
+        <div style="font-weight:700; color:#92400E; font-size:0.95rem; margin-bottom:4px;">Why response time matters more than you think.</div>
+        <div style="font-size:0.88rem; color:#78350F; line-height:1.6;">A patient messages your clinic enquiring about an appointment. Your admin sees it 45 minutes later — between calls, between patients. By then, the patient may have already reached out to two other clinics. The one that replied first gets the booking. <strong>Your AI replies in seconds. Every time. Day or night.</strong></div>
       </div>
     </div>
 
-    <div class="solutions-grid">
-
-      <!-- CARD 1: WhatsApp AI -->
-      <div class="solution-card reveal">
-        <div class="solution-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-        </div>
-        <h3>WhatsApp AI</h3>
-        <p>Your clinic's first responder — active 24/7 on the channel patients already use. Every enquiry gets an instant reply. No more leads left on read while your admin is with a patient.</p>
-        <ul class="solution-features">
-          <li>Replies to patient messages in seconds — hours, fees, directions, services</li>
-          <li>Books appointments and handles rescheduling without staff lifting a finger</li>
-          <li>Sends automated reminders — reduces no-shows by up to 60%</li>
-          <li>Follows up post-visit for rebooking and care reminders</li>
-          <li>Active evenings, weekends, and public holidays</li>
-        </ul>
-        <div class="solution-price" style="margin-top:auto; padding-top:20px; border-top:1px solid var(--border);">
-          <div class="solution-price-from" style="font-size:0.82rem; color:var(--text-muted); margin-bottom:2px;">One-time setup from</div>
-          <div class="solution-price-num">$1,200</div>
-          <div style="font-size:0.78rem; color:var(--text-muted); margin-top:4px;">Optional monthly maintenance available</div>
-        </div>
-      </div>
-
-      <!-- CARD 2: AI Employee -->
-      <div class="solution-card featured reveal">
-        <div class="solution-badge">Most Complete</div>
+    <!-- Single solution: AI Employee -->
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="solution-card featured reveal" style="border-width:2px;">
+        <div class="solution-badge">Our Core Service</div>
         <div class="solution-icon">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
         <h3>AI Employee <span style="font-size:0.75rem; font-weight:600; color:var(--accent); background:#EFF6FF; padding:2px 8px; border-radius:20px; vertical-align:middle;">24/7</span></h3>
-        <p>Think of it as hiring a full-time front desk staff member — one that never calls in sick, never misses a message, and handles your entire patient communication workflow while you focus on clinical work.</p>
+        <p>Your clinic's always-on front desk. Handles patient enquiries, appointment booking, reminders, and follow-ups — across every channel your patients use. Your staff focus on patient care, not their phone.</p>
         <ul class="solution-features">
-          <li>Everything in WhatsApp AI, plus multi-channel coverage</li>
-          <li>Captures leads from your website, Instagram, and Facebook — instantly</li>
-          <li>Proactive patient recall — prompts patients due for their next visit</li>
-          <li>Handles insurance queries, MC requests, and clinical FAQs</li>
-          <li>Admin workflows: daily summaries, data capture, follow-up sequences</li>
+          <li>Replies to patient enquiries instantly — hours, fees, services, directions</li>
+          <li>Books, reschedules, and confirms appointments without staff involvement</li>
+          <li>Sends automated reminders to reduce no-shows</li>
+          <li>Captures leads from WhatsApp, your website, Instagram, and Facebook</li>
+          <li>Proactive patient recall — nudges patients due for their next visit</li>
+          <li>Handles insurance queries, MC requests, and common clinical FAQs</li>
+          <li>Admin workflows: data capture, daily summaries, follow-up sequences</li>
+          <li>Active evenings, weekends, and public holidays — never off-duty</li>
         </ul>
-        <div class="solution-price" style="margin-top:auto; padding-top:20px; border-top:1px solid var(--border);">
-          <div class="solution-price-from" style="font-size:0.82rem; color:var(--text-muted); margin-bottom:2px;">One-time setup from</div>
-          <div class="solution-price-num">$2,200</div>
-          <div style="font-size:0.78rem; color:var(--text-muted); margin-top:4px;">Optional monthly maintenance available</div>
+        <div style="margin-top:24px; padding-top:20px; border-top:1px solid var(--border); display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+          <div>
+            <div style="font-size:0.82rem; color:var(--text-muted); margin-bottom:4px;">Setup starting from</div>
+            <div style="font-size:2rem; font-weight:800; color:var(--text-primary); line-height:1;">$1,500</div>
+            <div style="font-size:0.78rem; color:var(--text-muted); margin-top:4px;">one-time · + optional Growth Add-On from $300/month</div>
+          </div>
+          <button class="btn-primary" onclick="openModal()" style="white-space:nowrap;">Book a Discovery Call →</button>
         </div>
       </div>
-
     </div>
-    <p style="text-align:center; margin-top:24px; font-size:0.85rem; color:var(--text-muted);">Both solutions are custom-built for your clinic. Use the pricing calculator below for a full estimate — or just bring your questions to the discovery call.</p>
+
+    <!-- Other services teaser -->
+    <div class="reveal" style="max-width:700px; margin:32px auto 0; background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:24px 28px;">
+      <div style="font-size:0.78rem; font-weight:600; letter-spacing:1.4px; text-transform:uppercase; color:var(--text-muted); margin-bottom:10px;">Also available</div>
+      <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65; margin:0;">Beyond the core AI Employee, we also build <strong>automated reporting dashboards</strong>, <strong>data analysis systems</strong>, and <strong>custom workflow automations</strong> tailored to your clinic's operations. These are discussed and scoped individually — bring it up on the discovery call if you're curious.</p>
+    </div>
+
+    <p style="text-align:center; margin-top:24px; font-size:0.85rem; color:var(--text-muted);">Every system is custom-built for your clinic. Final pricing confirmed on your discovery call.</p>
   </div>
 </section>
 
@@ -1211,113 +1377,123 @@
   </div>
 </section>
 
-<!-- ─── PRICING CALCULATOR ─── -->
+<!-- ─── PRICING ─── -->
 <section id="pricing" class="section section-alt">
   <div class="container">
     <div class="section-header reveal">
       <span class="label"><span class="label-dot"></span>Pricing</span>
       <h2>Simple, transparent pricing.<br />No hidden fees.</h2>
-      <p>Get an instant estimate based on your clinic size and what you need. Exact quotes provided on your discovery call.</p>
+      <p>One setup fee. Everything configured, trained, and handed over. Optional add-on available if you want continuous improvement — explained below.</p>
     </div>
 
-    <div class="calc-wrapper reveal">
-      <div class="calc-top">
-        <div class="calc-row">
-          <div style="flex:1; min-width:200px;">
-            <div class="calc-label">Select your solution</div>
-            <div class="calc-toggle-group">
-              <button class="calc-toggle-btn active" onclick="calcSelect('solution', 'whatsapp', this)">WhatsApp AI</button>
-              <button class="calc-toggle-btn" onclick="calcSelect('solution', 'employee', this)">AI Employee</button>
-              <button class="calc-toggle-btn" onclick="calcSelect('solution', 'both', this)">Both (save 15%)</button>
-            </div>
-          </div>
-        </div>
-        <div class="calc-row">
-          <div style="flex:1; min-width:200px;">
-            <div class="calc-label">Clinic size</div>
-            <div class="calc-toggle-group">
-              <button class="calc-toggle-btn active" onclick="calcSelect('size', 'small', this)">Small (1–2 chairs)</button>
-              <button class="calc-toggle-btn" onclick="calcSelect('size', 'medium', this)">Medium (3–5 chairs)</button>
-              <button class="calc-toggle-btn" onclick="calcSelect('size', 'large', this)">Large (6+ chairs)</button>
-            </div>
-          </div>
-        </div>
+    <!-- Pricing cards -->
+    <div class="reveal" style="max-width:800px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+
+      <!-- Setup card -->
+      <div style="background:var(--bg); border:1px solid var(--border); border-radius:16px; padding:36px 32px;">
+        <div style="font-size:0.72rem; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:var(--text-muted); margin-bottom:16px;">One-Time Setup</div>
+        <div style="font-size:2.6rem; font-weight:800; color:var(--text-primary); line-height:1; margin-bottom:4px;">From $1,500</div>
+        <div style="font-size:0.82rem; color:var(--text-muted); margin-bottom:24px;">paid once, yours to keep</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; gap:8px; font-size:0.88rem; color:var(--text-secondary);"><span style="color:var(--success); font-weight:700; flex-shrink:0;">✓</span>Full AI Employee system built &amp; configured</li>
+          <li style="display:flex; gap:8px; font-size:0.88rem; color:var(--text-secondary);"><span style="color:var(--success); font-weight:700; flex-shrink:0;">✓</span>All channel integrations set up</li>
+          <li style="display:flex; gap:8px; font-size:0.88rem; color:var(--text-secondary);"><span style="color:var(--success); font-weight:700; flex-shrink:0;">✓</span>Staff and owner training included</li>
+          <li style="display:flex; gap:8px; font-size:0.88rem; color:var(--text-secondary);"><span style="color:var(--success); font-weight:700; flex-shrink:0;">✓</span>Live in 1–3 weeks</li>
+        </ul>
       </div>
-      <div class="calc-bottom">
-        <div class="calc-result">
-          <div class="calc-result-label">One-time setup</div>
-          <div class="calc-result-val" id="calc-setup">$1,200</div>
-          <div class="calc-result-sub">paid once</div>
+
+      <!-- Add-on card -->
+      <div style="background:#0F172A; border:1px solid #1E293B; border-radius:16px; padding:36px 32px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-40px; right:-40px; width:160px; height:160px; background:radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%); pointer-events:none;"></div>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+          <div style="font-size:0.72rem; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:#60A5FA;">Growth Add-On</div>
+          <div style="font-size:0.65rem; font-weight:700; background:rgba(37,99,235,0.25); color:#93C5FD; padding:2px 8px; border-radius:20px; border:1px solid rgba(37,99,235,0.4);">Optional</div>
         </div>
-        <div class="calc-result">
-          <div class="calc-result-label">Optional maintenance</div>
-          <div class="calc-result-val" id="calc-monthly">$200–$300</div>
-          <div class="calc-result-sub">per month, if needed</div>
-        </div>
-        <div class="calc-result">
-          <div class="calc-result-label">Est. monthly savings</div>
-          <div class="calc-result-val savings" id="calc-savings">$600–$1,200</div>
-          <div class="calc-result-sub">admin + no-shows</div>
-        </div>
+        <div style="font-size:2.6rem; font-weight:800; color:#FFFFFF; line-height:1; margin-bottom:4px;">$300<span style="font-size:1rem; font-weight:500; color:#64748B;">/month</span></div>
+        <div style="font-size:0.82rem; color:#475569; margin-bottom:24px;">starting from</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; gap:8px; font-size:0.88rem; color:#CBD5E1;"><span style="color:#34D399; font-weight:700; flex-shrink:0;">✓</span>Monthly script &amp; response optimisation</li>
+          <li style="display:flex; gap:8px; font-size:0.88rem; color:#CBD5E1;"><span style="color:#34D399; font-weight:700; flex-shrink:0;">✓</span>Conversion improvements over time</li>
+          <li style="display:flex; gap:8px; font-size:0.88rem; color:#CBD5E1;"><span style="color:#34D399; font-weight:700; flex-shrink:0;">✓</span>Patient reactivation campaigns</li>
+          <li style="display:flex; gap:8px; font-size:0.88rem; color:#CBD5E1;"><span style="color:#34D399; font-weight:700; flex-shrink:0;">✓</span>Monthly insights &amp; performance review</li>
+        </ul>
+        <div style="margin-top:20px; font-size:0.78rem; color:#34D399; font-weight:600;">Just 2–3 extra bookings/month covers the cost</div>
       </div>
-      <p class="calc-disclaimer">Estimates based on typical Singapore dental/medical clinic benchmarks. Actual savings depend on clinic volume, no-show rate, and staff costs. Final pricing confirmed on your discovery call.</p>
     </div>
 
-    <!-- ROI note -->
-    <div style="max-width:760px; margin:24px auto 0; display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; text-align:center;">
+    <!-- ROI anchors -->
+    <div style="max-width:800px; margin:24px auto 0; display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; text-align:center;">
       <div style="padding:20px; background:var(--bg); border:1px solid var(--border); border-radius:10px;">
         <div style="font-size:1.4rem; font-weight:800; color:var(--accent); margin-bottom:4px;">~$3,000</div>
         <div style="font-size:0.82rem; color:var(--text-muted);">Average monthly receptionist salary in Singapore</div>
       </div>
       <div style="padding:20px; background:var(--bg); border:1px solid var(--border); border-radius:10px;">
-        <div style="font-size:1.4rem; font-weight:800; color:var(--success); margin-bottom:4px;">From $1,200</div>
-        <div style="font-size:0.82rem; color:var(--text-muted);">One-time setup cost — yours to keep, no recurring lock-in</div>
+        <div style="font-size:1.4rem; font-weight:800; color:var(--success); margin-bottom:4px;">From $1,500</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">One-time setup — system is yours forever</div>
       </div>
       <div style="padding:20px; background:var(--bg); border:1px solid var(--border); border-radius:10px;">
-        <div style="font-size:1.4rem; font-weight:800; color:var(--text-primary); margin-bottom:4px;">30 days</div>
-        <div style="font-size:0.82rem; color:var(--text-muted);">Typical time to see measurable ROI after going live</div>
+        <div style="font-size:1.4rem; font-weight:800; color:var(--text-primary); margin-bottom:4px;">1–3 weeks</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">Typical time from sign-off to going live</div>
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- ─── GROWTH & OPTIMISATION LAYER ─── -->
+<section id="growth" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label"><span class="label-dot"></span>Optional add-on</span>
+      <h2>Turn More Enquiries Into<br />Paying Patients Every Month</h2>
+      <p>Your AI system works from day one. But this is where the results compound.</p>
+    </div>
+
+    <div class="growth-card reveal">
+      <div class="growth-tag">⚡ Growth &amp; Optimisation Layer</div>
+      <p class="growth-sub">Clinics lose 30–50% of their enquiries — not because they have no system, but because scripts go stale, responses become repetitive, and follow-ups stop converting. This add-on fixes that, continuously.</p>
+      <p class="growth-tagline">"This is where the real results come from — not just automation, but continuous improvement."</p>
+
+      <!-- Without / With comparison -->
+      <div class="growth-compare">
+        <div class="growth-compare-col without">
+          <div class="growth-compare-label">Without add-on</div>
+          <p>Your AI system works. Enquiries are answered, appointments are booked, admin time is saved. You're ahead of 90% of clinics.</p>
+        </div>
+        <div class="growth-compare-col with">
+          <div class="growth-compare-label">With add-on</div>
+          <p>Your system improves every month. Scripts get sharper. Conversions go up. Dormant patients are reactivated. Missed leads are recovered. Revenue compounds.</p>
+        </div>
+      </div>
+
+      <hr class="growth-divider"/>
+
+      <div class="growth-features-title">What's included every month</div>
+      <ul class="growth-features">
+        <li>Conversation &amp; script optimisation based on real interactions</li>
+        <li>Response quality improvements to increase booking conversion</li>
+        <li>Monthly performance review &amp; system enhancements</li>
+        <li>WhatsApp reactivation campaigns for dormant patients</li>
+        <li>Lead follow-up sequence improvements</li>
+        <li>Basic insights: missed leads, drop-off points, booking rates</li>
+      </ul>
+
+      <div class="growth-price-row">
+        <div>
+          <div class="growth-price">From $300<span>/month</span></div>
+          <div class="growth-roi">Just 2–3 additional bookings per month covers the cost</div>
+          <div class="growth-popular">★ Most clinics choose this to maximise ROI from their enquiries</div>
+        </div>
+        <button class="btn-growth" onclick="openModal()">Add This to My Plan →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <script>
-  // ─── PRICING CALCULATOR ───
-  const calcData = {
-    whatsapp: {
-      setup:   { small: '$1,200',  medium: '$1,600',  large: '$2,200'  },
-      monthly: { small: '$200–$300', medium: '$300–$400', large: '$400–$550' },
-      savings: { small: '$600–$1,200', medium: '$1,000–$2,000', large: '$1,800–$3,500' }
-    },
-    employee: {
-      setup:   { small: '$2,200',  medium: '$3,000',  large: '$4,200'  },
-      monthly: { small: '$350–$500', medium: '$500–$700', large: '$700–$1,000' },
-      savings: { small: '$1,000–$2,000', medium: '$1,800–$3,500', large: '$3,000–$5,500' }
-    },
-    both: {
-      setup:   { small: '$3,000',  medium: '$4,000',  large: '$5,500'  },
-      monthly: { small: '$450–$650', medium: '$650–$900', large: '$900–$1,300' },
-      savings: { small: '$1,400–$2,800', medium: '$2,500–$4,500', large: '$4,000–$7,000' }
-    }
-  };
-
-  let calcState = { solution: 'whatsapp', size: 'small' };
-
-  function calcSelect(type, value, btn) {
-    calcState[type] = value;
-    btn.closest('.calc-toggle-group').querySelectorAll('.calc-toggle-btn')
-       .forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    updateCalc();
-  }
-
-  function updateCalc() {
-    const row = calcData[calcState.solution];
-    document.getElementById('calc-setup').textContent   = row.setup[calcState.size];
-    document.getElementById('calc-monthly').textContent = row.monthly[calcState.size];
-    document.getElementById('calc-savings').textContent = row.savings[calcState.size];
-  }
+  // ─── PRICING (static — confirmed on discovery call) ───
+  // No calculator needed — pricing is straightforward:
+  // Setup: $1,500 one-time | Growth add-on: from $300/month
 </script>
 
 <!-- ─── CASE STUDIES ─── -->
@@ -1440,7 +1616,7 @@
             </div>
             <div class="about-value-text">
               <h4>Fast ROI</h4>
-              <p>Most clients see a measurable return within 30 days. We build for results, not show.</p>
+              <p>We build for measurable outcomes — fewer no-shows, more bookings, less admin time. Results vary, and we'll be upfront about what's realistic for your clinic.</p>
             </div>
           </div>
           <div class="about-value">
@@ -1507,7 +1683,15 @@
           My staff aren't tech-savvy. Will they be able to use this?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">Yes. The whole point is that your team shouldn't need to do anything extra. The AI handles patient conversations automatically — your staff just log into their regular tools, exactly as before. We train your team during handover and stay available after.</div>
+        <div class="faq-answer">Yes. The whole point is that your team shouldn't need to do anything extra. The AI handles patient conversations automatically. That said, we provide full training for both your staff and you as the owner — covering how the system works, what to monitor, and how to flag anything unusual. We walk you through everything at handover and remain available after go-live.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What training is included?
+          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Training is fully included. Before handover, we run a dedicated session with your staff — showing them how the AI handles enquiries, what it will and won't do, and how to step in when needed. We also run a separate walkthrough with you as the owner, so you know how to monitor the system, read the reports, and make adjustments over time. You won't be left to figure it out on your own.</div>
       </div>
 
       <div class="faq-item reveal">
@@ -1515,15 +1699,15 @@
           How quickly will we see results?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">Most clinics notice fewer no-shows within the first 1–2 weeks of the reminder system going live. Admin time reductions happen immediately — the AI starts answering patient messages from day one. Full ROI typically shows within 30 days.</div>
+        <div class="faq-answer">The AI starts answering patient messages from day one — admin relief is immediate. Appointment reminders kick in as soon as the system goes live, which directly reduces no-shows. In terms of financial ROI, this depends on your clinic's volume and current no-show rate, which we'll assess together before you commit to anything.</div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What does the monthly fee cover?
+          What does the monthly service fee cover?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">The monthly retainer covers platform costs (WhatsApp API, automation tools), ongoing maintenance, and our support. There are no surprise charges. Everything is broken down clearly before you sign anything — we show you exactly what you're paying for and why.</div>
+        <div class="faq-answer">The monthly service fee covers your AI Employee system — the automation infrastructure, integrations, and everything needed to keep it running. A separate maintenance and support retainer is available if you want ongoing priority assistance, updates, and performance tuning. There are no surprise charges — everything is broken down clearly before you sign anything.</div>
       </div>
 
       <div class="faq-item reveal">
@@ -1531,7 +1715,7 @@
           What if the AI says something wrong to a patient?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">The AI only answers within the scope of what we configure it to know — clinic hours, fees, services, and appointment logistics. Anything outside that is routed to your staff. Clinical advice is never given by the AI. We test extensively before going live and tune it based on your real patient conversations.</div>
+        <div class="faq-answer">The AI only answers within the scope of what we configure it to know — clinic hours, fees, services, and appointment logistics. Anything outside that is immediately flagged out to your staff. Clinical advice is never given by the AI. We test extensively before going live and tune it based on your real patient conversations.</div>
       </div>
 
       <div class="faq-item reveal">
@@ -1539,7 +1723,7 @@
           How long does setup take?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">Smaller projects like WhatsApp AI are typically live within 1 week. Larger builds like AI Employee can take up to 3 weeks depending on scope. We move fast because we know every week of delay is another week of missed leads and admin costs.</div>
+        <div class="faq-answer">Simpler configurations are typically live within 1 week. Larger or more complex builds can take up to 3 weeks depending on integrations and scope. We move fast because we know every week of delay is another week of missed leads and admin costs.</div>
       </div>
 
     </div>
@@ -1569,17 +1753,21 @@
       <div class="footer-brand">
         <a href="#" class="nav-logo" style="margin-bottom:12px; display:inline-flex;">
           <div class="nav-logo-mark">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="16" cy="23" rx="13" ry="8" fill="white"/>
-              <circle cx="8.5" cy="11" r="6.5" fill="white"/>
-              <circle cx="23.5" cy="11" r="6.5" fill="white"/>
-              <circle cx="9.5" cy="11.5" r="3" fill="#1D4ED8"/>
-              <circle cx="24.5" cy="11.5" r="3" fill="#1D4ED8"/>
-              <circle cx="10.5" cy="10" r="1" fill="white"/>
-              <circle cx="25.5" cy="10" r="1" fill="white"/>
-              <circle cx="13.5" cy="21" r="1.1" fill="#2563EB"/>
-              <circle cx="18.5" cy="21" r="1.1" fill="#2563EB"/>
-              <path d="M 9,27 Q 16,31 23,27" stroke="#2563EB" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16,2 C12,2 8.5,4 7,7.5 C5.5,7 3.5,9.5 4.5,12.5 C3,15 3,19 5.5,22 C6,25 7.5,28 10,29.5 C12,30.5 13.5,29.5 14.5,27.5 L16,26 L17.5,27.5 C18.5,29.5 20,30.5 22,29.5 C24.5,28 26,25 26.5,22 C29,19 29,15 27.5,12.5 C28.5,9.5 26.5,7 25,7.5 C23.5,4 20,2 16,2 Z" fill="white"/>
+              <ellipse cx="16" cy="19.5" rx="4.5" ry="6" fill="#2563EB"/>
+              <circle cx="10" cy="11" r="4" fill="white"/>
+              <circle cx="22" cy="11" r="4" fill="white"/>
+              <circle cx="10.5" cy="11.5" r="2.2" fill="#1D4ED8"/>
+              <circle cx="22.5" cy="11.5" r="2.2" fill="#1D4ED8"/>
+              <circle cx="9.4" cy="10.4" r="0.9" fill="white"/>
+              <circle cx="21.4" cy="10.4" r="0.9" fill="white"/>
+              <circle cx="8" cy="27.5" r="1.2" fill="white"/>
+              <circle cx="11" cy="29" r="1.2" fill="white"/>
+              <circle cx="14" cy="29.5" r="1.2" fill="white"/>
+              <circle cx="18" cy="29.5" r="1.2" fill="white"/>
+              <circle cx="21" cy="29" r="1.2" fill="white"/>
+              <circle cx="24" cy="27.5" r="1.2" fill="white"/>
             </svg>
           </div>
           VarusCore
@@ -1595,10 +1783,10 @@
       </div>
       <div class="footer-links-group">
         <h4>Solutions</h4>
-        <a href="#services">WhatsApp AI</a>
         <a href="#services">AI Employee</a>
-        <a href="#pricing">Pricing Calculator</a>
-        <a href="#case-studies">Results</a>
+        <a href="#growth">Growth Add-On</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How it works</a>
       </div>
       <div class="footer-links-group">
         <h4>Contact</h4>
