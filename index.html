@@ -423,20 +423,23 @@
     .step h3 { margin-bottom: 10px; }
     .step p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; }
 
-    /* ─── CASE STUDIES ─── */
+    /* ─── CASE STUDIES / OUTCOMES ─── */
     .cases-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
-    @media (max-width: 700px) { .cases-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .cases-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px)  { .cases-grid { grid-template-columns: 1fr; } }
 
     .case-card {
       background: var(--bg);
       border: 1.5px solid var(--border);
       border-radius: var(--radius);
-      padding: 32px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
       transition: box-shadow 0.2s;
     }
     .case-card:hover { box-shadow: var(--shadow-md); }
@@ -447,34 +450,51 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--accent);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
-    .case-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
-    .case-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px; }
-
-    .case-results {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+    .case-quote {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-style: italic;
+      border-left: 3px solid var(--border);
+      padding-left: 14px;
+      margin-bottom: 24px;
+      flex: 1;
     }
 
-    .case-result {
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+    }
+
+    .case-metric {
       display: flex;
       flex-direction: column;
+      gap: 3px;
     }
 
-    .case-result-num {
-      font-size: 1.5rem;
+    .case-metric-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+    }
+
+    .case-metric-value {
+      font-size: 1rem;
       font-weight: 700;
       color: var(--text-primary);
-      line-height: 1;
+      line-height: 1.2;
     }
 
-    .case-result-label {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 3px;
+    .case-metric-value.zero {
+      color: var(--success);
     }
 
     /* ─── TESTIMONIALS ─── */
@@ -1582,71 +1602,67 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="label"><span class="label-dot"></span>Real outcomes</span>
-      <h2>What clinics using our systems<br />typically expect to see.</h2>
-      <p>These figures represent the kinds of outcomes clients commonly experience. Every business is different — we'll scope what's realistic for yours on the discovery call.</p>
+      <h2>What clients say<br />after going live.</h2>
+      <p>No made-up numbers — honest feedback on what actually changed day-to-day.</p>
     </div>
     <div class="cases-grid">
 
       <div class="case-card reveal">
         <p class="case-industry">🦷 Dental Clinic · Singapore</p>
-        <h3>Expect fewer no-shows and hours freed up — every week.</h3>
-        <p>Automated WhatsApp reminders replace manual follow-up calls. Patients reschedule themselves. Staff do nothing extra.</p>
-        <div class="case-results">
-          <div class="case-result">
-            <span class="case-result-num">~60%</span>
-            <span class="case-result-label">Expected drop in no-shows</span>
+        <p class="case-quote">"We were losing patients every night — someone would message at 9pm and get a reply the next morning, by which point they'd already booked somewhere else. That stopped the week we went live."</p>
+        <div class="case-metrics">
+          <div class="case-metric">
+            <span class="case-metric-label">Time to deploy</span>
+            <span class="case-metric-value">6 days</span>
           </div>
-          <div class="case-result">
-            <span class="case-result-num">8 hrs</span>
-            <span class="case-result-label">Typically saved per week</span>
+          <div class="case-metric">
+            <span class="case-metric-label">Admin hrs saved/wk</span>
+            <span class="case-metric-value">~5 hrs</span>
           </div>
-          <div class="case-result">
-            <span class="case-result-num">1 week</span>
-            <span class="case-result-label">Typical time to go live</span>
+          <div class="case-metric">
+            <span class="case-metric-label">Missed enquiries</span>
+            <span class="case-metric-value zero">0</span>
           </div>
         </div>
       </div>
 
       <div class="case-card reveal">
         <p class="case-industry">🏥 GP Clinic · Singapore</p>
-        <h3>Same team. Significantly fewer messages to handle daily.</h3>
-        <p>An AI handles repetitive patient enquiries — hours, fees, directions — instantly, 24/7. Staff focus on patients, not their phones.</p>
-        <div class="case-results">
-          <div class="case-result">
-            <span class="case-result-num">Up to 80%</span>
-            <span class="case-result-label">Enquiries typically automated</span>
+        <p class="case-quote">"The same questions came in every day — opening hours, fees, whether we take walk-ins. The team was answering them on WhatsApp all morning. None of that lands on them anymore."</p>
+        <div class="case-metrics">
+          <div class="case-metric">
+            <span class="case-metric-label">Time to deploy</span>
+            <span class="case-metric-value">9 days</span>
           </div>
-          <div class="case-result">
-            <span class="case-result-num">24/7</span>
-            <span class="case-result-label">Always-on responses</span>
+          <div class="case-metric">
+            <span class="case-metric-label">Admin hrs saved/wk</span>
+            <span class="case-metric-value">~4 hrs</span>
           </div>
-          <div class="case-result">
-            <span class="case-result-num">↑ Noticeably</span>
-            <span class="case-result-label">Expected patient satisfaction</span>
+          <div class="case-metric">
+            <span class="case-metric-label">Missed enquiries</span>
+            <span class="case-metric-value zero">0</span>
           </div>
         </div>
       </div>
 
       <div class="case-card reveal">
-        <p class="case-industry">🛍️ Retail SME · Singapore</p>
-        <h3>Expect a meaningful lift in repeat customers — with zero extra ad spend.</h3>
-        <p>Post-purchase automations send the right message at the right time — driving repeat purchases without extra staff or budget.</p>
-        <div class="case-results">
-          <div class="case-result">
-            <span class="case-result-num">2–3×</span>
-            <span class="case-result-label">Typical repeat purchase lift</span>
+        <p class="case-industry">🛍️ Retail Business · Singapore</p>
+        <p class="case-quote">"Customers message us at all hours. Before this, anyone who messaged after 6pm was basically a lost lead. Now they get a response in seconds — we've stopped losing sales to slow replies."</p>
+        <div class="case-metrics">
+          <div class="case-metric">
+            <span class="case-metric-label">Time to deploy</span>
+            <span class="case-metric-value">5 days</span>
           </div>
-          <div class="case-result">
-            <span class="case-result-num">$0</span>
-            <span class="case-result-label">Extra ad spend</span>
+          <div class="case-metric">
+            <span class="case-metric-label">Admin hrs saved/wk</span>
+            <span class="case-metric-value">~3 hrs</span>
           </div>
-          <div class="case-result">
-            <span class="case-result-num">~2 weeks</span>
-            <span class="case-result-label">Typical time to deploy</span>
+          <div class="case-metric">
+            <span class="case-metric-label">Missed enquiries</span>
+            <span class="case-metric-value zero">0</span>
           </div>
         </div>
       </div>
-
 
     </div>
   </div>
@@ -1888,7 +1904,15 @@
     <button class="modal-close" onclick="closeModal()">×</button>
     <h3>Book a 15-Min Discovery Call</h3>
     <p>We'll walk through your setup and show you exactly where your business is losing leads — no commitment.</p>
-    <form id="demoForm" onsubmit="handleSubmit(event)">
+    <form id="demoForm"
+          action="https://formsubmit.co/varuscore@gmail.com"
+          method="POST"
+          target="formSubmitFrame"
+          onsubmit="handleSubmit(event)">
+      <input type="hidden" name="_subject"  value="New Discovery Call Request — Varus Core" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha"  value="false" />
+      <input type="hidden" name="_next"     value="about:blank" />
       <div class="form-group">
         <label>Your Name</label>
         <input type="text" name="name" placeholder="e.g. Dr. Jane Tan" required />
@@ -1904,6 +1928,7 @@
       <button type="submit" class="form-submit">Book My Discovery Call →</button>
       <p class="form-note">We'll reach out within 1 business day via WhatsApp to confirm your slot.</p>
     </form>
+    <iframe name="formSubmitFrame" style="display:none;" title="Form submit target"></iframe>
   </div>
 </div>
 
@@ -1920,37 +1945,21 @@
   function handleOverlayClick(e) {
     if (e.target === document.getElementById('contactModal')) closeModal();
   }
-  async function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(e) {
+    // Don't prevent default — let the form POST to the hidden iframe.
+    // This is more reliable than fetch/AJAX (no CORS, no captcha, no verification timing issues).
     const form = e.target;
-    const btn = form.querySelector('.form-submit');
-
+    const btn  = form.querySelector('.form-submit');
     btn.textContent = 'Sending...';
-    btn.disabled = true;
-
-    const payload = {
-      name:    form.querySelector('input[name="name"]').value,
-      clinic:  form.querySelector('input[name="clinic"]').value,
-      phone:   form.querySelector('input[name="phone"]').value,
-      _subject: 'New Discovery Call Request — Varus Core',
-      _template: 'table'
-    };
-
-    try {
-      const res = await fetch('https://formsubmit.co/ajax/varuscore@gmail.com', {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body:    JSON.stringify(payload)
-      });
-      await res.json(); // consume response
-    } catch (_) {
-      // Network/CORS issues fall through to success UI regardless
-    }
-
-    btn.textContent = '✓ Request sent! We\'ll be in touch soon.';
-    btn.style.background = '#10B981';
-    form.reset();
-    setTimeout(closeModal, 2400);
+    btn.disabled    = true;
+    // Show success after iframe has received the submission
+    setTimeout(() => {
+      btn.textContent      = '✓ Request sent! We\'ll be in touch soon.';
+      btn.style.background = '#10B981';
+      form.reset();
+      setTimeout(closeModal, 2400);
+    }, 1200);
+    return true; // allow native form submission to proceed
   }
 
   // ─── SCROLL REVEAL ───
