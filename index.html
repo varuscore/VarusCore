@@ -3,8 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Varus Core — AI Front Desk for Clinics & Businesses</title>
-  <meta name="description" content="Varus Core builds AI front desk systems that answer enquiries, book appointments, and follow up automatically — 24/7, without adding staff." />
+  <title>AI Front Desk for Dental & Medical Clinics in Singapore | Varus Core</title>
+  <meta name="description" content="Varus Core builds AI front desk systems for dental and medical clinics in Singapore — automating WhatsApp enquiries, appointment bookings, and follow-ups 24/7. Plans from $300/month." />
+  <link rel="canonical" href="https://varuscore.com" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://varuscore.com" />
+  <meta property="og:title"       content="AI Front Desk for Dental & Medical Clinics in Singapore | Varus Core" />
+  <meta property="og:description" content="Stop losing patients after hours. Varus Core automates WhatsApp enquiries, bookings, and follow-ups for clinics in Singapore — 24/7, without adding staff." />
+  <meta property="og:image"       content="https://varuscore.com/og-image.png" />
+  <meta property="og:locale"      content="en_SG" />
+  <meta property="og:site_name"   content="Varus Core" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="AI Front Desk for Clinics in Singapore | Varus Core" />
+  <meta name="twitter:description" content="Stop losing patients after hours. Varus Core automates WhatsApp enquiries, bookings, and follow-ups for clinics — 24/7." />
+  <meta name="twitter:image"       content="https://varuscore.com/og-image.png" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- Structured Data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Varus Core",
+    "description": "AI front desk systems for dental and medical clinics in Singapore — automating WhatsApp enquiries, appointment bookings, and follow-ups 24/7.",
+    "url": "https://varuscore.com",
+    "logo": "https://varuscore.com/og-image.png",
+    "address": { "@type": "PostalAddress", "addressCountry": "SG", "addressLocality": "Singapore" },
+    "areaServed": "Singapore",
+    "serviceType": ["AI Clinic Automation", "WhatsApp Chatbot", "AI Appointment Booking", "Medical Clinic AI Front Desk"],
+    "priceRange": "$$",
+    "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "availableLanguage": "English" }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Can AI handle patient enquiries after hours without any staff?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The AI responds to WhatsApp messages, website enquiries, and DMs at any hour — answering FAQs, collecting patient details, and booking appointments automatically. Anything outside its configured scope is immediately flagged to your team." }},
+      { "@type": "Question", "name": "Will this work with our current clinic management system?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most likely yes. We work with WhatsApp Business API, common clinic management systems including Plato and Galen Health, Google Calendar, and others. We'll check compatibility before you commit." }},
+      { "@type": "Question", "name": "How quickly will we see results from the AI front desk?",
+        "acceptedAnswer": { "@type": "Answer", "text": "After-hours coverage kicks in from day one. Appointment reminders start reducing no-shows straight away. Financial ROI depends on your clinic's volume." }},
+      { "@type": "Question", "name": "How long does AI clinic setup take?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Simpler configurations go live within 1 week. Larger builds can take up to 3 weeks depending on integrations and scope." }},
+      { "@type": "Question", "name": "How much does an AI front desk for a clinic cost in Singapore?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Plans start from $300/month with a one-time setup fee from $1,500. The Basic plan covers 24/7 WhatsApp AI responses. Growth ($500/month) adds automated booking and reminders. Full AI Front Desk ($800/month) includes lead qualification, reactivation, and monthly optimisation." }}
+    ]
+  }
+  </script>
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -1252,7 +1313,7 @@
 
 <!-- ─── ANNOUNCEMENT BAR ─── -->
 <div id="announcement-bar">
-  ⚡ Now taking on new clients — book your discovery call today. <button class="btn-primary" onclick="openModal()" style="margin-left:12px; padding:5px 14px; font-size:0.8rem; border-radius:4px;">Get started →</button>
+  ⚡ Now taking on new clients — book your discovery call today. <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})" style="margin-left:12px; padding:5px 14px; font-size:0.8rem; border-radius:4px;">Get started →</button>
   <button class="bar-close" onclick="this.parentElement.style.display='none'" aria-label="Close">×</button>
 </div>
 
@@ -1263,30 +1324,41 @@
       <a href="#" class="nav-logo">
         <div class="nav-logo-mark">
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <!-- Body: front-facing frog silhouette (white on blue bg) -->
-            <path d="M16,2 C12,2 8.5,4 7,7.5 C5.5,7 3.5,9.5 4.5,12.5 C3,15 3,19 5.5,22 C6,25 7.5,28 10,29.5 C12,30.5 13.5,29.5 14.5,27.5 L16,26 L17.5,27.5 C18.5,29.5 20,30.5 22,29.5 C24.5,28 26,25 26.5,22 C29,19 29,15 27.5,12.5 C28.5,9.5 26.5,7 25,7.5 C23.5,4 20,2 16,2 Z" fill="white"/>
-            <!-- Belly (blue cutout effect) -->
-            <ellipse cx="16" cy="19.5" rx="4.5" ry="6" fill="#2563EB"/>
-            <!-- Left eye sclera -->
-            <circle cx="10" cy="11" r="4" fill="white"/>
-            <!-- Right eye sclera -->
-            <circle cx="22" cy="11" r="4" fill="white"/>
-            <!-- Left pupil -->
-            <circle cx="10.5" cy="11.5" r="2.2" fill="#1D4ED8"/>
-            <!-- Right pupil -->
-            <circle cx="22.5" cy="11.5" r="2.2" fill="#1D4ED8"/>
-            <!-- Left shine -->
-            <circle cx="9.4" cy="10.4" r="0.9" fill="white"/>
-            <!-- Right shine -->
-            <circle cx="21.4" cy="10.4" r="0.9" fill="white"/>
-            <!-- Toe pads (left) -->
-            <circle cx="8" cy="27.5" r="1.2" fill="white"/>
-            <circle cx="11" cy="29" r="1.2" fill="white"/>
-            <circle cx="14" cy="29.5" r="1.2" fill="white"/>
-            <!-- Toe pads (right) -->
-            <circle cx="18" cy="29.5" r="1.2" fill="white"/>
-            <circle cx="21" cy="29" r="1.2" fill="white"/>
-            <circle cx="24" cy="27.5" r="1.2" fill="white"/>
+            <!-- Globe outline -->
+            <circle cx="14" cy="16" r="12.5" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="0.8"/>
+            <!-- Globe latitude lines -->
+            <path d="M1.8,10 Q14,13.5 26.2,10" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="0.6"/>
+            <line x1="1.7" y1="16" x2="26.3" y2="16" stroke="rgba(255,255,255,0.18)" stroke-width="0.6"/>
+            <path d="M2.5,22 Q14,18.5 25.5,22" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="0.6"/>
+            <!-- Globe longitude lines -->
+            <line x1="14" y1="3.5" x2="14" y2="28.5" stroke="rgba(255,255,255,0.18)" stroke-width="0.6"/>
+            <path d="M8,4 Q5,16 8,28" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+            <!-- Frog body (side profile, white) -->
+            <ellipse cx="10" cy="21" rx="5.5" ry="4.5" fill="white"/>
+            <!-- Frog head -->
+            <circle cx="12" cy="13.5" r="5.5" fill="white"/>
+            <!-- Eye dome (on top of head) -->
+            <circle cx="15" cy="9.5" r="3.8" fill="white"/>
+            <!-- Eye iris blue -->
+            <circle cx="15" cy="9.5" r="2.7" fill="#1D4ED8"/>
+            <!-- Eye highlight -->
+            <circle cx="13.9" cy="8.3" r="1.1" fill="white"/>
+            <!-- Mouth (smile) -->
+            <path d="M9,15.5 Q12,17.5 15,15.5" fill="none" stroke="rgba(30,60,180,0.35)" stroke-width="0.7" stroke-linecap="round"/>
+            <!-- Arm holding rifle -->
+            <ellipse cx="14" cy="18" rx="3" ry="1.2" fill="white" transform="rotate(-10 14 18)"/>
+            <!-- Rifle body/grip -->
+            <rect x="14.5" y="15.5" width="4.5" height="3.5" rx="1" fill="white"/>
+            <!-- Rifle barrel -->
+            <rect x="18.5" y="16" width="12.5" height="1.6" rx="0.8" fill="white"/>
+            <!-- Muzzle brake -->
+            <rect x="30" y="14.8" width="1.5" height="3.8" rx="0.6" fill="white"/>
+            <!-- Scope -->
+            <rect x="20" y="13.8" width="6" height="2.2" rx="0.9" fill="white"/>
+            <!-- Scope lens (crosshair) -->
+            <circle cx="25" cy="14.9" r="0.85" fill="#1D4ED8"/>
+            <line x1="23.1" y1="14.9" x2="26.9" y2="14.9" stroke="#1D4ED8" stroke-width="0.4"/>
+            <line x1="25" y1="13" x2="25" y2="16.8" stroke="#1D4ED8" stroke-width="0.4"/>
           </svg>
         </div>
         Varus Core
@@ -1299,7 +1371,7 @@
         <li><a href="#about">About</a></li>
       </ul>
       <div class="nav-cta">
-        <button class="btn-primary" onclick="openModal()">Book a Discovery Call</button>
+        <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})">Book a Discovery Call</button>
       </div>
       <div class="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -1321,7 +1393,7 @@
       We build AI front desk systems for dental and medical clinics — answering enquiries, booking appointments, and following up automatically. 24/7, without adding staff.
     </p>
     <div class="hero-actions reveal">
-      <button class="btn-primary" onclick="openModal()">
+      <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         Book a 15-Min Discovery Call
       </button>
@@ -1453,7 +1525,7 @@
 
     <p class="reveal" style="text-align:center; margin-top:32px; font-size:0.88rem; color:var(--text-muted);">Not sure what you need? We'll walk you through it on the discovery call and scope it together.</p>
     <div class="reveal" style="text-align:center; margin-top:16px;">
-      <button class="btn-primary" onclick="openModal()">Book a 15-Min Discovery Call →</button>
+      <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})">Book a 15-Min Discovery Call →</button>
     </div>
   </div>
 </section>
@@ -1590,7 +1662,7 @@
 
     <p class="reveal" style="text-align:center; margin-top:28px; font-size:0.85rem; color:var(--text-muted);">Not sure which plan fits? We'll walk you through it on the discovery call — no commitment required.</p>
     <div class="reveal" style="text-align:center; margin-top:12px;">
-      <button class="btn-primary" onclick="openModal()">Book a 15-Min Discovery Call →</button>
+      <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})">Book a 15-Min Discovery Call →</button>
     </div>
 
   </div>
@@ -1832,7 +1904,7 @@
     <h2>Find out exactly where<br />your clinic is losing patients.</h2>
     <p>Book a free 15-minute discovery call. We'll walk through your current setup, show you where enquiries are falling through, and tell you what it would save you — before you commit to anything.</p>
     <div class="cta-actions">
-      <button class="btn-white" onclick="openModal()">
+      <button class="btn-white" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         Book a 15-Min Discovery Call
       </button>
@@ -1873,7 +1945,7 @@
         <a href="#about">About us</a>
         <a href="#services">Services</a>
         <a href="#case-studies">Results</a>
-        <a href="#" onclick="openModal(); return false;">Contact</a>
+        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'}); return false;">Contact</a>
       </div>
       <div class="footer-links-group">
         <h4>Solutions</h4>
@@ -1885,7 +1957,7 @@
       <div class="footer-links-group">
         <h4>Contact</h4>
         <a href="#">Singapore</a>
-        <a href="#" onclick="openModal(); return false;">Book a Discovery Call</a>
+        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'}); return false;">Book a Discovery Call</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1898,70 +1970,9 @@
   </div>
 </footer>
 
-<!-- ─── CONTACT MODAL ─── -->
-<div class="modal-overlay" id="contactModal" onclick="handleOverlayClick(event)">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <h3>Book a 15-Min Discovery Call</h3>
-    <p>We'll walk through your setup and show you exactly where your business is losing leads — no commitment.</p>
-    <form id="demoForm"
-          action="https://formsubmit.co/varuscore@gmail.com"
-          method="POST"
-          target="formSubmitFrame"
-          onsubmit="handleSubmit(event)">
-      <input type="hidden" name="_subject"  value="New Discovery Call Request — Varus Core" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha"  value="false" />
-      <input type="hidden" name="_next"     value="about:blank" />
-      <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" name="name" placeholder="e.g. Dr. Jane Tan" required />
-      </div>
-      <div class="form-group">
-        <label>Clinic / Practice Name</label>
-        <input type="text" name="clinic" placeholder="e.g. Bright Smile Dental" required />
-      </div>
-      <div class="form-group">
-        <label>Phone Number (WhatsApp)</label>
-        <input type="tel" name="phone" placeholder="+65 9123 4567" required />
-      </div>
-      <button type="submit" class="form-submit">Book My Discovery Call →</button>
-      <p class="form-note">We'll reach out within 1 business day via WhatsApp to confirm your slot.</p>
-    </form>
-    <iframe name="formSubmitFrame" style="display:none;" title="Form submit target"></iframe>
-  </div>
-</div>
+<!-- Calendly popup replaces the old contact modal — no markup needed here -->
 
 <script>
-  // ─── MODAL ───
-  function openModal() {
-    document.getElementById('contactModal').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal() {
-    document.getElementById('contactModal').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function handleOverlayClick(e) {
-    if (e.target === document.getElementById('contactModal')) closeModal();
-  }
-  function handleSubmit(e) {
-    // Don't prevent default — let the form POST to the hidden iframe.
-    // This is more reliable than fetch/AJAX (no CORS, no captcha, no verification timing issues).
-    const form = e.target;
-    const btn  = form.querySelector('.form-submit');
-    btn.textContent = 'Sending...';
-    btn.disabled    = true;
-    // Show success after iframe has received the submission
-    setTimeout(() => {
-      btn.textContent      = '✓ Request sent! We\'ll be in touch soon.';
-      btn.style.background = '#10B981';
-      form.reset();
-      setTimeout(closeModal, 2400);
-    }, 1200);
-    return true; // allow native form submission to proceed
-  }
-
   // ─── SCROLL REVEAL ───
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
