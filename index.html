@@ -36,7 +36,7 @@
     "@type": "FAQPage",
     "mainEntity": [
       { "@type": "Question", "name": "What is WhatsApp AI?", "acceptedAnswer": { "@type": "Answer", "text": "WhatsApp AI is a 24/7 AI assistant that answers your clinic's WhatsApp enquiries in English, Malay, Mandarin and Tamil, trained on your treatments and workflows, and books appointments directly into your Google Calendar. Setup is SGD $1,200 with a SGD $400/month retainer." } },
-      { "@type": "Question", "name": "Is this PDPA compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A Data Processing Agreement is signed before go-live. Varus Core operates as your Data Intermediary under PDPA Part VIB, data is stored in Singapore, and you can request deletion at any time." } },
+      { "@type": "Question", "name": "Is this PDPA compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Varus Core is PDPA-compliant. Patient data is stored securely in Singapore, used only to answer enquiries and book appointments, and can be deleted on request." } },
       { "@type": "Question", "name": "How much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "WhatsApp AI is SGD $1,200 setup plus SGD $400/month, month-to-month with no lock-in. Frontdesk AI (custom training and monthly optimisation) is SGD $4,000 setup plus SGD $800/month. A standalone 60-day dormant patient campaign is SGD $2,500." } }
     ]
   }
@@ -985,6 +985,12 @@
       opacity: 1;
       transform: translateX(0);
     }
+    /* comparison cards (WhatsApp AI vs Frontdesk AI) */
+    .compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:880px; margin:0 auto 40px; align-items:start; }
+    @media (max-width:720px){ .compare-grid { grid-template-columns:1fr; } }
+    .compare-card { background:var(--bg); border:1.5px solid var(--border); border-radius:20px; padding:36px 32px; position:relative; }
+    .compare-card.featured { border:2px solid var(--accent); box-shadow:var(--shadow-md); }
+    .compare-card h3 { font-size:1.4rem; margin-bottom:6px; }
   </style>
 </head>
 <body>
@@ -1040,9 +1046,8 @@
         Varus Core
       </a>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#about">About</a></li>
       </ul>
       <div class="nav-cta">
@@ -1062,17 +1067,17 @@
       <span class="label"><span class="label-dot"></span>WhatsApp AI for Clinics · Singapore</span>
     </div>
     <h1 class="hero-headline reveal">
-      Every patient enquiry answered.<br /><span>Day or night, in their language.</span>
+      Automate the Front.<br /><span>Focus on the Chair.</span>
     </h1>
     <p class="hero-sub reveal">
-      Varus Core builds a 24/7 WhatsApp AI for your clinic. It replies to patient enquiries in English, Malay, Mandarin and Tamil, trained on your treatments and workflows, and books appointments straight into your calendar. Most clinics start here and see it working in the first week.
+      Varus Core builds a 24/7 WhatsApp AI for your clinic. It replies to patient enquiries in English, Malay, Mandarin and Tamil, trained on your treatments and workflows, and books appointments straight into your calendar. We recommend starting here — you'll see it working in the first week.
     </p>
     <div class="hero-actions reveal">
       <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         Book a 30-Min Discovery Call
       </button>
-      <a href="#services" class="btn-secondary">See what we build →</a>
+      <a href="#pricing" class="btn-secondary">See what we build →</a>
     </div>
     <p class="hero-note reveal"><span>✓ Free · 30 minutes · No commitment.</span> &nbsp;We'll look at how your clinic handles enquiries today and show you what the AI would change.</p>
   </div>
@@ -1103,7 +1108,7 @@
         </div>
       </div>
       <div class="trust-badges">
-        <div class="trust-badge"><svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> DPA signed before go-live</div>
+        <div class="trust-badge"><svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> PDPA-compliant &amp; secure</div>
         <div class="trust-badge"><svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> No lock-in</div>
         <div class="trust-badge"><svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> You approve before go-live</div>
       </div>
@@ -1139,43 +1144,6 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section section-alt">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="label"><span class="label-dot"></span>What we build</span>
-      <h2>Start with WhatsApp AI.<br />Scale when you're ready.</h2>
-      <p>Most clinics begin with WhatsApp AI, see it working in the first week, then move up to a fuller system. Here's the full menu.</p>
-    </div>
-    <div class="problem-grid">
-      <div class="service-card reveal" style="border:1px solid var(--accent);">
-        <div class="label" style="margin-bottom:10px;"><span class="label-dot"></span>Start here</div>
-        <h3>WhatsApp AI</h3>
-        <p style="font-weight:700; color:var(--accent); margin:6px 0 12px;">SGD $1,200 setup · $400/mo</p>
-        <p>A 24/7 AI that answers WhatsApp enquiries in English, Malay, Mandarin &amp; Tamil, trained on your treatments and workflows, and books appointments straight into your Google Calendar. Weekly report on response times and enquiries handled.</p>
-      </div>
-      <div class="service-card reveal">
-        <h3>Frontdesk AI</h3>
-        <p style="font-weight:700; color:var(--accent); margin:6px 0 12px;">SGD $4,000 setup · $800/mo</p>
-        <p>Everything in WhatsApp AI, but more capable — deeper custom training on your clinic, plus a monthly performance review and optimisation. The upgrade once you've seen WhatsApp AI work.</p>
-      </div>
-      <div class="service-card reveal">
-        <h3>60-Day Dormant Patient Campaign</h3>
-        <p style="font-weight:700; color:var(--accent); margin:6px 0 12px;">SGD $2,500 · 60 days</p>
-        <p>A WhatsApp campaign to win back patients who've stopped coming. If fewer than 10 patients rebook in 60 days, the second payment is waived. Optional $400/mo to keep reactivating patients as they go quiet.</p>
-      </div>
-      <div class="service-card reveal">
-        <h3>Custom Solutions</h3>
-        <p style="font-weight:700; color:var(--accent); margin:6px 0 12px;">Scoped to you</p>
-        <p>A specific workflow or problem that doesn't fit the packages above? Tell us what's eating your team's time and we'll scope something tailored to your clinic.</p>
-      </div>
-    </div>
-    <div class="reveal" style="text-align:center; margin-top:32px;">
-      <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})">Book a 30-Min Discovery Call →</button>
-    </div>
-  </div>
-</section>
-
 <!-- HOW IT WORKS -->
 <section id="how-it-works" class="section">
   <div class="container">
@@ -1193,7 +1161,7 @@
       <div class="step reveal">
         <div class="step-num">2</div>
         <h3>Setup &amp; Approval</h3>
-        <p>We train the AI on your clinic, connect your WhatsApp number and Google Calendar, and you review how it answers. DPA signed before go-live.</p>
+        <p>We train the AI on your clinic, connect your WhatsApp number and Google Calendar, and you review how it answers before anything goes live.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">3</div>
@@ -1204,49 +1172,62 @@
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- SERVICES & PRICING -->
 <section id="pricing" class="section section-alt">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label"><span class="label-dot"></span>Pricing</span>
-      <h2>Simple pricing.<br />No lock-in, ever.</h2>
-      <p>Start with WhatsApp AI. Month-to-month, cancel with 30 days' notice. Scale up or add a campaign whenever it makes sense.</p>
+      <span class="label"><span class="label-dot"></span>What we offer</span>
+      <h2>Two ways to automate<br />your front desk.</h2>
+      <p>We recommend starting with WhatsApp AI and upgrading to Frontdesk AI once you see results. Both are month-to-month, no lock-in.</p>
     </div>
 
-    <div class="pricing-hero-card reveal">
-      <div class="pricing-badge">⭐ Most clinics start here — WhatsApp AI</div>
+    <div class="compare-grid reveal">
 
-      <div class="pricing-price-row">
-        <div class="pricing-price">SGD $1,200</div>
-        <div class="pricing-price-label">one-time setup · then $400/month</div>
+      <div class="compare-card featured">
+        <div class="pricing-badge">⭐ Recommended to start</div>
+        <h3>WhatsApp AI</h3>
+        <div class="pricing-price-row" style="margin-top:6px;">
+          <div class="pricing-price" style="font-size:2.4rem;">SGD $1,200</div>
+          <div class="pricing-price-label">setup</div>
+        </div>
+        <p style="font-size:0.95rem; color:var(--text-secondary); margin:4px 0 20px;">then <strong style="color:var(--text-primary);">$400/month</strong> · month-to-month</p>
+        <div class="pricing-details" style="grid-template-columns:1fr; margin-bottom:24px;">
+          <div class="pricing-detail-item">Answers WhatsApp enquiries 24/7</div>
+          <div class="pricing-detail-item">English, Malay, Mandarin &amp; Tamil</div>
+          <div class="pricing-detail-item">Trained on your treatments &amp; workflows</div>
+          <div class="pricing-detail-item">Books appointments into Google Calendar</div>
+          <div class="pricing-detail-item">Weekly report: response times &amp; enquiries</div>
+          <div class="pricing-detail-item">Clinical questions handed to your team</div>
+          <div class="pricing-detail-item">PDPA-compliant &amp; secure</div>
+          <div class="pricing-detail-item">Live in about a week</div>
+        </div>
+        <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})" style="width:100%; justify-content:center;">Book a 30-Min Discovery Call →</button>
       </div>
-      <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:24px;">Month-to-month · no lock-in · cancel with 30 days' notice</p>
 
-      <div class="pricing-details">
-        <div class="pricing-detail-item">Answers WhatsApp enquiries 24/7</div>
-        <div class="pricing-detail-item">English, Malay, Mandarin &amp; Tamil</div>
-        <div class="pricing-detail-item">Trained on your treatments &amp; workflows</div>
-        <div class="pricing-detail-item">Books appointments into Google Calendar</div>
-        <div class="pricing-detail-item">Weekly report: response times &amp; enquiries handled</div>
-        <div class="pricing-detail-item">Clinical questions handed to your team</div>
-        <div class="pricing-detail-item">Data Processing Agreement included</div>
-        <div class="pricing-detail-item">Live in about a week</div>
+      <div class="compare-card">
+        <div class="pricing-badge" style="background:#EFF6FF; color:#1D4ED8; border-color:#BFDBFE;">Upgrade when ready</div>
+        <h3>Frontdesk AI</h3>
+        <div class="pricing-price-row" style="margin-top:6px;">
+          <div class="pricing-price" style="font-size:2.4rem;">SGD $4,000</div>
+          <div class="pricing-price-label">setup</div>
+        </div>
+        <p style="font-size:0.95rem; color:var(--text-secondary); margin:4px 0 20px;">then <strong style="color:var(--text-primary);">$800/month</strong> · month-to-month</p>
+        <div class="pricing-details" style="grid-template-columns:1fr; margin-bottom:24px;">
+          <div class="pricing-detail-item">Everything in WhatsApp AI</div>
+          <div class="pricing-detail-item">Deeper custom AI training on your clinic</div>
+          <div class="pricing-detail-item">Monthly performance review</div>
+          <div class="pricing-detail-item">Ongoing optimisation &amp; tuning</div>
+          <div class="pricing-detail-item">Priority support</div>
+          <div class="pricing-detail-item">PDPA-compliant &amp; secure</div>
+        </div>
+        <button class="btn-secondary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})" style="width:100%; justify-content:center; text-align:center;">Talk to us about Frontdesk AI →</button>
       </div>
 
-      <div style="margin-top:28px; text-align:center;">
-        <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})" style="font-size:1rem; padding:14px 32px;">Book a 30-Min Discovery Call →</button>
-        <p style="margin-top:12px; font-size:0.8rem; color:var(--text-muted);">Free · No commitment · We'll confirm fit before you decide anything</p>
-      </div>
     </div>
 
     <div class="pricing-after reveal">
-      <h3>Scale up or add a campaign</h3>
+      <h3>Also available</h3>
       <div class="pricing-after-options">
-        <div class="pricing-after-option">
-          <div class="pricing-after-option-label">Frontdesk AI</div>
-          <div class="pricing-after-option-price">$4,000<span style="font-size:0.85rem; font-weight:400; color:var(--text-muted);"> setup</span></div>
-          <div class="pricing-after-option-desc">Everything in WhatsApp AI plus deeper custom training and monthly optimisation. $800/month.</div>
-        </div>
         <div class="pricing-after-option">
           <div class="pricing-after-option-label">60-Day Dormant Campaign</div>
           <div class="pricing-after-option-price">$2,500<span style="font-size:0.85rem; font-weight:400; color:var(--text-muted);"> 60 days</span></div>
@@ -1258,7 +1239,7 @@
           <div class="pricing-after-option-desc">A workflow that doesn't fit the packages? We'll scope something tailored to your clinic.</div>
         </div>
       </div>
-      <p style="margin-top:16px; font-size:0.82rem; color:var(--text-muted);">No auto-renewal on anything. You decide actively what to add and when.</p>
+      <p style="margin-top:16px; font-size:0.82rem; color:var(--text-muted);">No lock-in, no auto-renewal. You decide what to add and when.</p>
     </div>
 
   </div>
@@ -1269,37 +1250,36 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-content reveal">
-        <span class="label"><span class="label-dot"></span>Who we are</span>
-        <h2>I saw what clinics were losing.<br />Varus Core is the fix.</h2>
-        <p>Clinics in Singapore lose patients in two quiet ways: enquiries that never get answered fast enough, and patients who drift away and never come back. Neither is anyone's fault — the front desk simply can't be everywhere at once.</p>
-        <p>Varus Core builds the systems that catch both. The one most clinics start with is WhatsApp AI: it answers every enquiry 24/7, in the patient's language, and books the appointment before they lose interest.</p>
-        <p>I'm Danial — Singaporean, ex-Big 4 audit, now full-time on clinic automation. Audit taught me to obsess over what can go wrong, which is why every build is PDPA-first and you approve everything before it goes live.</p>
+        <span class="label"><span class="label-dot"></span>Why Varus Core</span>
+        <h2>Your front desk,<br />minus the busywork.</h2>
+        <p>Every missed enquiry is a patient who books with whoever replies first. Every hour your team spends answering the same questions is an hour not spent on patients in the clinic.</p>
+        <p>Varus Core puts an AI on your WhatsApp that answers instantly in your patients' language and books appointments straight into your calendar — so enquiries turn into bookings around the clock and your team gets their time back.</p>
         <div class="about-values">
-          <div class="about-value">
-            <div class="about-value-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div class="about-value-text">
-              <h4>PDPA-first, always</h4>
-              <p>DPA signed before go-live. Data stored in Singapore. Deletion on request, anytime.</p>
-            </div>
-          </div>
           <div class="about-value">
             <div class="about-value-icon">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
             </div>
             <div class="about-value-text">
-              <h4>You approve everything first</h4>
-              <p>No patient gets an automated reply until you've reviewed and signed off on how it answers.</p>
+              <h4>Always on</h4>
+              <p>Answers in seconds, 24/7, in English, Malay, Mandarin &amp; Tamil — even after hours.</p>
             </div>
           </div>
           <div class="about-value">
             <div class="about-value-icon">
-              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
             </div>
             <div class="about-value-text">
-              <h4>Singapore-based, always reachable</h4>
-              <p>Reach me on WhatsApp. If something needs attention, it gets handled fast.</p>
+              <h4>You stay in control</h4>
+              <p>You approve how it answers before it goes live, and clinical questions always go to your team.</p>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="about-value-text">
+              <h4>PDPA-compliant &amp; secure</h4>
+              <p>Patient data stays in Singapore and is handled securely — nothing leaves without your sign-off.</p>
             </div>
           </div>
         </div>
@@ -1381,7 +1361,7 @@
           Is this PDPA compliant?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">Yes. Your clinic remains the Data Controller; Varus Core operates as your Data Intermediary under PDPA Part VIB. A Data Processing Agreement is signed before go-live, data is stored in Singapore, and you can request deletion of stored conversation data at any time.</div>
+        <div class="faq-answer">Yes. Varus Core is PDPA-compliant and secure. Your clinic stays in control of its data, patient information is stored securely in Singapore and used only to answer enquiries and book appointments, and you can request deletion at any time.</div>
       </div>
 
       <div class="faq-item reveal">
@@ -1405,7 +1385,7 @@
           What's the difference between WhatsApp AI and Frontdesk AI?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">WhatsApp AI ($1,200 setup + $400/month) covers 24/7 enquiry handling and booking. Frontdesk AI ($4,000 setup + $800/month) is the upgrade — everything in WhatsApp AI plus deeper custom training and a monthly performance review and optimisation. Most clinics start with WhatsApp AI and move up once they've seen it work.</div>
+        <div class="faq-answer">WhatsApp AI ($1,200 setup + $400/month) covers 24/7 enquiry handling and booking. Frontdesk AI ($4,000 setup + $800/month) is the upgrade — everything in WhatsApp AI plus deeper custom training and a monthly performance review and optimisation. We recommend starting with WhatsApp AI and upgrading to Frontdesk AI once you see results.</div>
       </div>
 
       <div class="faq-item reveal">
@@ -1474,13 +1454,13 @@
       <div class="footer-links-group">
         <h4>Company</h4>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <a href="#pricing">Services</a>
         <a href="#how-it-works">How it works</a>
         <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'}); return false;">Contact</a>
       </div>
       <div class="footer-links-group">
         <h4>Services</h4>
-        <a href="#services">WhatsApp AI</a>
+        <a href="#pricing">WhatsApp AI</a>
         <a href="#pricing">Pricing</a>
         <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'}); return false;">Book a call</a>
       </div>
