@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patient Reactivation for Dental & Medical Clinics in Singapore | Varus Core</title>
-  <meta name="description" content="Varus Core runs 60-day WhatsApp patient reactivation campaigns for dental and medical clinics in Singapore. Bring back dormant patients — fewer than 10 rebookings in 60 days and the second payment is waived. From SGD $1,800." />
+  <title>AI Front Desk & Patient Reactivation for Clinics in Singapore | Varus Core</title>
+  <meta name="description" content="Varus Core builds WhatsApp AI front desk systems and runs 60-day patient reactivation campaigns for dental and medical clinics in Singapore. Live in about a week. No lock-in. Fewer than 10 rebookings in 60 days — second payment waived." />
   <link rel="canonical" href="https://varuscore.com" />
-  <meta property="og:title" content="Patient Reactivation for Clinics in Singapore | Varus Core" />
-  <meta property="og:description" content="60-day WhatsApp patient reactivation campaigns for dental and medical clinics in Singapore. PDPA compliant. Results guaranteed." />
+  <meta property="og:title" content="AI Front Desk & Patient Reactivation for Clinics | Varus Core Singapore" />
+  <meta property="og:description" content="WhatsApp AI front desk and 60-day patient reactivation campaigns for dental and medical clinics in Singapore. PDPA-compliant. Results guaranteed." />
   <meta property="og:url" content="https://varuscore.com" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://varuscore.com/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Patient Reactivation for Clinics in Singapore | Varus Core" />
-  <meta name="twitter:description" content="60-day WhatsApp patient reactivation campaigns for dental and medical clinics in Singapore." />
+  <meta name="twitter:title" content="AI Front Desk & Patient Reactivation | Varus Core Singapore" />
+  <meta name="twitter:description" content="WhatsApp AI front desk and 60-day patient reactivation campaigns for dental and medical clinics in Singapore." />
   <meta name="robots" content="index, follow" />
 
   <script type="application/ld+json">
@@ -21,12 +21,12 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Varus Core",
-    "description": "WhatsApp patient reactivation campaigns for dental and medical clinics in Singapore.",
+    "description": "WhatsApp AI front desk systems and patient reactivation campaigns for dental and medical clinics in Singapore.",
     "url": "https://varuscore.com",
     "telephone": "+6591386145",
     "address": { "@type": "PostalAddress", "addressCountry": "SG", "addressLocality": "Singapore" },
     "areaServed": "Singapore",
-    "serviceType": "Patient Reactivation, WhatsApp Marketing, Healthcare Automation"
+    "serviceType": "WhatsApp AI, Patient Reactivation, Healthcare Automation, AI Front Desk"
   }
   </script>
 
@@ -35,9 +35,10 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "What is patient reactivation?", "acceptedAnswer": { "@type": "Answer", "text": "Patient reactivation is the process of reaching out to patients who haven't visited in 9–18+ months to bring them back into your clinic. Most dormant patients haven't switched clinics — they drifted away. A well-timed, personalised message via WhatsApp is often all it takes." } },
-      { "@type": "Question", "name": "Is this PDPA compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A Data Processing Agreement is signed before any patient data is shared. We operate as your Data Intermediary under PDPA Part VIB. Only three fields are used: phone number, last visit date, and opt-in flag. All data is stored in Singapore (AWS) and purged within 30 days of the pilot ending." } },
-      { "@type": "Question", "name": "What if fewer than 10 patients rebook?", "acceptedAnswer": { "@type": "Answer", "text": "If fewer than 10 patients rebook within 60 days, the second payment of SGD $900 is waived. You keep all the data, all messaging templates, and a full picture of which patient segments responded." } }
+      { "@type": "Question", "name": "What is patient reactivation?", "acceptedAnswer": { "@type": "Answer", "text": "Patient reactivation is reaching out to patients who haven't visited in 9–18+ months to bring them back. Most haven't switched clinics — they drifted away. A personalised WhatsApp message at the right time is often all it takes." } },
+      { "@type": "Question", "name": "What is the WhatsApp AI and what does it do?", "acceptedAnswer": { "@type": "Answer", "text": "The WhatsApp AI is a 24/7 automated front desk that answers patient enquiries, handles FAQs, qualifies leads, and books appointments — directly in WhatsApp, in English, Malay, Mandarin and Tamil. It runs continuously without adding to your team's workload. Setup from SGD $1,200, then $400/month." } },
+      { "@type": "Question", "name": "Is this PDPA compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A Data Processing Agreement is signed before any patient data is shared. We operate as your Data Intermediary under PDPA Part VIB. Only three fields are used for reactivation: phone number, last visit date, and opt-in flag. All data is stored in Singapore (AWS) and purged within 30 days of the campaign ending." } },
+      { "@type": "Question", "name": "What if fewer than 10 patients rebook?", "acceptedAnswer": { "@type": "Answer", "text": "If fewer than 10 dormant patients rebook within 60 days, the second payment of SGD $1,250 is waived. You keep all the data, all the messaging templates, and a full close-out report." } }
     ]
   }
   </script>
@@ -221,7 +222,6 @@
       flex-shrink: 0;
     }
 
-    /* WHITE BACKGROUND LOGO MARK */
     .nav-logo-mark {
       width: 40px;
       height: 40px;
@@ -275,6 +275,24 @@
       .nav-cta .btn-primary { display: none; }
     }
 
+    /* ─── POV STRIP ─── */
+    #pov-strip {
+      background: var(--bg-section);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      text-align: center;
+    }
+
+    #pov-strip p {
+      font-size: 0.93rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    #pov-strip strong { color: var(--text-primary); font-style: normal; }
+
     /* ─── HERO ─── */
     #hero {
       padding: 96px 0 80px;
@@ -284,7 +302,7 @@
     .hero-eyebrow { margin-bottom: 28px; }
 
     .hero-headline {
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-size: clamp(2rem, 4.5vw, 3.1rem);
       font-weight: 800;
       line-height: 1.12;
       letter-spacing: -0.03em;
@@ -298,9 +316,33 @@
       font-size: 1.05rem;
       color: var(--text-secondary);
       line-height: 1.75;
-      max-width: 580px;
-      margin: 0 auto 40px;
+      max-width: 620px;
+      margin: 0 auto 32px;
     }
+
+    /* ─── RISK-REVERSAL BANNER ─── */
+    .risk-reversal {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      max-width: 680px;
+      margin: 0 auto 36px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .risk-reversal-icon { font-size: 1.1rem; flex-shrink: 0; line-height: 1.6; }
+
+    .risk-reversal p {
+      font-size: 0.9rem;
+      color: #166534;
+      line-height: 1.65;
+    }
+
+    .risk-reversal strong { font-weight: 700; }
 
     .hero-actions {
       display: flex;
@@ -320,7 +362,7 @@
 
     /* ─── TRUST BAR ─── */
     #trust {
-      padding: 32px 0;
+      padding: 28px 0;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       background: var(--bg-section);
@@ -329,59 +371,16 @@
     .trust-inner {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 28px;
       flex-wrap: wrap;
       justify-content: center;
-    }
-
-    .trust-label {
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-
-    .trust-divider {
-      width: 1px;
-      height: 32px;
-      background: var(--border);
-      flex-shrink: 0;
-    }
-
-    .trust-stats {
-      display: flex;
-      gap: 32px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .trust-stat {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3px;
-    }
-
-    .trust-stat-num {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--text-primary);
-      line-height: 1;
-    }
-
-    .trust-stat-label {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      text-align: center;
-      white-space: nowrap;
     }
 
     .trust-badges {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .trust-badge {
@@ -394,7 +393,7 @@
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 999px;
-      padding: 5px 12px;
+      padding: 6px 14px;
     }
 
     .trust-badge-icon { width: 12px; height: 12px; color: var(--success); }
@@ -418,7 +417,79 @@
       line-height: 1.7;
     }
 
-    /* ─── SERVICE / PROBLEM CARDS ─── */
+    /* ─── TWO-OFFER CARDS ─── */
+    .offers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 720px) { .offers-grid { grid-template-columns: 1fr; } }
+
+    .offer-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .offer-card:hover { box-shadow: var(--shadow-md); border-color: #C7D2FE; }
+    .offer-card.featured { border-color: var(--accent); border-width: 2px; }
+
+    .offer-icon {
+      width: 52px; height: 52px;
+      background: var(--accent-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .offer-icon svg { width: 26px; height: 26px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+    .offer-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    .offer-card > p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; flex: 1; }
+
+    .offer-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 28px;
+    }
+
+    .offer-features li {
+      display: flex;
+      gap: 9px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .offer-features li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .offer-price {
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+
+    .offer-price-from { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+    .offer-price-num { font-size: 1.9rem; font-weight: 800; color: var(--text-primary); line-height: 1; }
+    .offer-price-num span { font-size: 0.85rem; font-weight: 500; color: var(--text-muted); }
+    .offer-price-note { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+
+    /* ─── SERVICE CARDS (problem) ─── */
     .service-card {
       background: var(--bg);
       border: 1.5px solid var(--border);
@@ -427,9 +498,73 @@
       transition: box-shadow 0.2s, border-color 0.2s;
     }
     .service-card:hover { box-shadow: var(--shadow-md); border-color: #C7D2FE; }
-
     .service-card h3 { margin-bottom: 10px; }
     .service-card p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    @media (max-width: 720px) { .problem-grid { grid-template-columns: 1fr; } }
+
+    /* ─── ROI TABLE ─── */
+    .roi-table-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .roi-intro {
+      text-align: center;
+      font-size: 0.97rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .roi-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      font-size: 0.9rem;
+    }
+
+    .roi-table thead { background: var(--text-primary); }
+
+    .roi-table thead th {
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .roi-table tbody tr { border-bottom: 1px solid var(--border); }
+    .roi-table tbody tr:last-child { border-bottom: none; }
+
+    .roi-table tbody td {
+      padding: 16px 20px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .roi-table tbody td:first-child { font-weight: 600; color: var(--text-primary); }
+    .roi-table tbody td.highlight { color: var(--success); font-weight: 700; }
+
+    .roi-disclaimer {
+      margin-top: 16px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      text-align: center;
+    }
 
     /* ─── PILOT PHASES ─── */
     .pilot-phase {
@@ -444,9 +579,7 @@
     .pilot-phase:hover { box-shadow: var(--shadow-md); }
 
     .pilot-phase-num {
-      width: 40px;
-      height: 40px;
-      min-width: 40px;
+      width: 40px; height: 40px; min-width: 40px;
       border-radius: 10px;
       background: var(--accent-soft);
       color: var(--accent);
@@ -459,69 +592,37 @@
     }
 
     .pilot-phase-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 8px;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 8px;
     }
 
     .pilot-phase h3 { font-size: 1rem; margin-bottom: 8px; }
     .pilot-phase p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
 
-    .pilot-phase ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 10px;
-    }
+    .pilot-phase ul { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
 
     .pilot-phase ul li {
-      display: flex;
-      gap: 8px;
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
+      display: flex; gap: 8px;
+      font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;
     }
 
-    .pilot-phase ul li::before {
-      content: '✓';
-      color: var(--success);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
+    .pilot-phase ul li::before { content: '✓'; color: var(--success); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
     /* ─── STEPS ─── */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
     @media (max-width: 720px) { .steps-grid { grid-template-columns: 1fr; } }
 
     .step {
-      text-align: center;
-      padding: 36px 24px;
-      background: var(--bg);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius);
+      text-align: center; padding: 36px 24px;
+      background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius);
     }
 
     .step-num {
-      width: 48px;
-      height: 48px;
-      background: var(--accent);
-      color: #fff;
+      width: 48px; height: 48px;
+      background: var(--accent); color: #fff;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 800;
       margin: 0 auto 20px;
     }
 
@@ -529,213 +630,94 @@
     .step p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
 
     /* ─── PRICING ─── */
-    .pricing-hero-card {
-      max-width: 680px;
-      margin: 0 auto 48px;
-      background: var(--bg);
-      border: 2px solid var(--accent);
-      border-radius: 20px;
-      padding: 48px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .pricing-hero-card::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 200px; height: 200px;
-      background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .pricing-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #FEF3C7;
-      color: #92400E;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 999px;
-      border: 1px solid #FDE68A;
-      margin-bottom: 20px;
-    }
-
-    .pricing-price-row {
-      display: flex;
-      align-items: flex-end;
-      gap: 12px;
-      margin-bottom: 8px;
-    }
-
-    .pricing-price {
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--text-primary);
-      line-height: 1;
-    }
-
-    .pricing-price-label {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      padding-bottom: 6px;
-    }
-
-    .pricing-guarantee {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      background: #F0FDF4;
-      border: 1px solid #BBF7D0;
-      border-radius: var(--radius-sm);
-      padding: 14px 18px;
-      margin: 24px 0;
-    }
-
-    .pricing-guarantee-icon {
-      font-size: 1rem;
-      line-height: 1.5;
-      flex-shrink: 0;
-    }
-
-    .pricing-guarantee p {
-      font-size: 0.88rem;
-      color: #166534;
-      line-height: 1.6;
-    }
-
-    .pricing-guarantee strong { font-weight: 700; }
-
-    .pricing-details {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-
-    @media (max-width: 560px) { .pricing-details { grid-template-columns: 1fr; } }
-
-    .pricing-detail-item {
-      display: flex;
-      gap: 8px;
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-    }
-
-    .pricing-detail-item::before {
-      content: '✓';
-      color: var(--success);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .pricing-payment-note {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
-    }
-
-    .pricing-after {
-      max-width: 680px;
-      margin: 0 auto;
+    .pricing-table-wrap {
+      max-width: 820px;
+      margin: 0 auto 40px;
       background: var(--bg);
       border: 1.5px solid var(--border);
       border-radius: 16px;
-      padding: 36px 40px;
+      overflow: hidden;
     }
 
-    .pricing-after h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-size: 0.78rem;
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
     }
 
-    .pricing-after-options {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
+    .pricing-table thead { background: var(--text-primary); }
 
-    @media (max-width: 560px) { .pricing-after-options { grid-template-columns: 1fr; } }
-
-    .pricing-after-option {
-      padding: 16px 20px;
-      background: var(--bg-section);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-    }
-
-    .pricing-after-option-label {
+    .pricing-table thead th {
+      padding: 14px 24px;
+      text-align: left;
       font-size: 0.78rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
-      margin-bottom: 4px;
+      letter-spacing: 0.07em;
+      color: rgba(255,255,255,0.65);
     }
 
-    .pricing-after-option-price {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--text-primary);
-      margin-bottom: 4px;
+    .pricing-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .pricing-table tbody tr:last-child { border-bottom: none; }
+    .pricing-table tbody tr:hover { background: var(--bg-section); }
+
+    .pricing-table td { padding: 20px 24px; vertical-align: top; }
+
+    .pt-offering { font-weight: 700; font-size: 0.97rem; color: var(--text-primary); margin-bottom: 4px; }
+    .pt-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.5; }
+
+    .pt-price-setup { font-size: 1.15rem; font-weight: 800; color: var(--text-primary); line-height: 1.2; }
+    .pt-price-retainer { font-size: 0.83rem; color: var(--text-muted); margin-top: 3px; }
+    .pt-badge { display: inline-block; font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-left: 6px; vertical-align: middle; }
+    .pt-badge.popular { background: #EFF6FF; color: var(--accent); border: 1px solid #BFDBFE; }
+    .pt-badge.guaranteed { background: #F0FDF4; color: #166534; border: 1px solid #BBF7D0; }
+
+    .pricing-guarantee-card {
+      max-width: 820px;
+      margin: 0 auto 40px;
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: var(--radius);
+      padding: 20px 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
     }
 
-    .pricing-after-option-desc {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.5;
+    .pricing-guarantee-card-icon { font-size: 1.2rem; flex-shrink: 0; line-height: 1.5; }
+
+    .pricing-guarantee-card p { font-size: 0.9rem; color: #166534; line-height: 1.65; }
+    .pricing-guarantee-card strong { font-weight: 700; }
+
+    .pricing-cta {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     /* ─── ABOUT ─── */
     .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: center;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
     }
-
     @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
 
     .about-content h2 { margin-bottom: 18px; }
     .about-content p { color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; font-size: 0.97rem; }
 
-    .about-values {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-top: 28px;
-    }
+    .about-values { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
 
     .about-value {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
+      display: flex; align-items: flex-start; gap: 14px;
       padding: 16px 20px;
-      background: var(--bg-section);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
+      background: var(--bg-section); border: 1px solid var(--border); border-radius: var(--radius-sm);
     }
 
     .about-value-icon {
-      width: 36px; height: 36px;
-      min-width: 36px;
-      background: var(--accent-soft);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 36px; height: 36px; min-width: 36px;
+      background: var(--accent-soft); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
     }
     .about-value-icon svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -743,84 +725,46 @@
     .about-value-text p { font-size: 0.84rem; color: var(--text-muted); margin: 0; }
 
     .about-visual {
-      background: var(--bg-section);
-      border: 1.5px solid var(--border);
-      border-radius: 16px;
-      padding: 36px;
+      background: var(--bg-section); border: 1.5px solid var(--border); border-radius: 16px; padding: 36px;
     }
 
     .about-visual h3 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--text-muted);
-      margin-bottom: 24px;
+      font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--text-muted); margin-bottom: 24px;
     }
 
     .pilot-snapshot-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-      gap: 12px;
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 14px 0; border-bottom: 1px solid var(--border); gap: 12px;
     }
+    .pilot-snapshot-row:last-of-type { border-bottom: none; }
 
-    .pilot-snapshot-row:last-child { border-bottom: none; }
+    .pilot-snapshot-label { font-size: 0.87rem; color: var(--text-secondary); }
 
-    .pilot-snapshot-label {
-      font-size: 0.87rem;
-      color: var(--text-secondary);
-    }
-
-    .pilot-snapshot-value {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      text-align: right;
-    }
-
+    .pilot-snapshot-value { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); text-align: right; }
     .pilot-snapshot-value.green { color: var(--success); }
 
     /* ─── FAQ ─── */
-    .faq-list {
-      max-width: 700px;
-      margin: 0 auto;
-    }
+    .faq-list { max-width: 700px; margin: 0 auto; }
 
     .faq-item { border-bottom: 1px solid var(--border); }
 
     .faq-question {
-      width: 100%;
-      text-align: left;
-      background: none;
-      border: none;
-      padding: 22px 0;
-      font-size: 0.97rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
+      width: 100%; text-align: left; background: none; border: none;
+      padding: 22px 0; font-size: 0.97rem; font-weight: 600;
+      color: var(--text-primary); cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
       font-family: var(--font);
     }
 
     .faq-icon {
-      width: 20px; height: 20px;
-      min-width: 20px;
-      color: var(--text-muted);
-      transition: transform 0.2s;
+      width: 20px; height: 20px; min-width: 20px;
+      color: var(--text-muted); transition: transform 0.2s;
     }
 
     .faq-answer {
-      display: none;
-      padding-bottom: 20px;
-      font-size: 0.92rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
+      display: none; padding-bottom: 20px;
+      font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;
     }
 
     .faq-item.open .faq-answer { display: block; }
@@ -828,170 +772,108 @@
 
     /* ─── FINAL CTA ─── */
     #cta {
-      background: var(--text-primary);
-      padding: 96px 0;
-      text-align: center;
+      background: var(--text-primary); padding: 96px 0; text-align: center;
     }
 
     #cta .label { background: rgba(37,99,235,0.15); color: #93C5FD; }
     #cta h2 { color: #fff; margin-bottom: 18px; }
-    #cta p { color: #94A3B8; font-size: 1.05rem; max-width: 520px; margin: 0 auto 40px; line-height: 1.7; }
+    #cta p { color: #94A3B8; font-size: 1.05rem; max-width: 520px; margin: 0 auto 32px; line-height: 1.7; }
 
-    .cta-actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    /* ─── FOOTER ─── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 56px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 10px;
-      max-width: 260px;
+    .cta-risk-reversal {
+      background: rgba(16,185,129,0.1);
+      border: 1px solid rgba(16,185,129,0.3);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      max-width: 620px;
+      margin: 0 auto 36px;
+      font-size: 0.9rem;
+      color: #6EE7B7;
       line-height: 1.65;
     }
 
+    .cta-risk-reversal strong { color: #A7F3D0; }
+
+    .cta-actions {
+      display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap;
+    }
+
+    /* ─── FOOTER ─── */
+    footer { border-top: 1px solid var(--border); padding: 56px 0; }
+
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 40px; flex-wrap: wrap;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem; color: var(--text-muted);
+      margin-top: 10px; max-width: 260px; line-height: 1.65;
+    }
+
     .footer-links-group h4 {
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 14px;
+      font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 14px;
     }
 
     .footer-links-group a {
-      display: block;
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      text-decoration: none;
-      margin-bottom: 10px;
-      transition: color 0.15s;
+      display: block; font-size: 0.88rem; color: var(--text-secondary);
+      text-decoration: none; margin-bottom: 10px; transition: color 0.15s;
     }
     .footer-links-group a:hover { color: var(--text-primary); }
 
     .footer-bottom {
-      margin-top: 48px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
+      margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
     }
-
     .footer-bottom p { font-size: 0.82rem; color: var(--text-muted); }
-
     .footer-bottom-links { display: flex; gap: 20px; }
-
     .footer-bottom-links a {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.15s;
+      font-size: 0.82rem; color: var(--text-muted);
+      text-decoration: none; transition: color 0.15s;
     }
     .footer-bottom-links a:hover { color: var(--text-secondary); }
 
-    /* ─── PROBLEM GRID ─── */
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    @media (max-width: 720px) { .problem-grid { grid-template-columns: 1fr; } }
-
     /* ─── SCROLL REVEAL ─── */
     .reveal {
-      opacity: 0;
-      transform: translateY(20px);
+      opacity: 0; transform: translateY(20px);
       transition: opacity 0.55s ease, transform 0.55s ease;
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* ─── WHATSAPP WIDGET ─── */
     .wa-widget {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 10px;
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
     }
 
     .wa-btn {
-      width: 56px;
-      height: 56px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+      width: 56px; height: 56px;
+      background: #25D366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
       text-decoration: none;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
-    .wa-btn:hover {
-      transform: scale(1.08) translateY(-2px);
-      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
-    }
-
-    .wa-btn svg {
-      width: 30px;
-      height: 30px;
-      fill: white;
-    }
+    .wa-btn:hover { transform: scale(1.08) translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.55); }
+    .wa-btn svg { width: 30px; height: 30px; fill: white; }
 
     .wa-tooltip {
-      background: #0F172A;
-      color: white;
-      font-size: 0.78rem;
-      font-weight: 500;
-      padding: 7px 13px;
-      border-radius: 7px;
+      background: #0F172A; color: white;
+      font-size: 0.78rem; font-weight: 500;
+      padding: 7px 13px; border-radius: 7px;
       white-space: nowrap;
-      opacity: 0;
-      transform: translateX(8px);
+      opacity: 0; transform: translateX(8px);
       transition: opacity 0.2s, transform 0.2s;
-      pointer-events: none;
-      font-family: var(--font);
+      pointer-events: none; font-family: var(--font);
     }
-
-    .wa-widget:hover .wa-tooltip {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    .wa-widget:hover .wa-tooltip { opacity: 1; transform: translateX(0); }
   </style>
 </head>
 <body>
 
 <!-- ─── ANNOUNCEMENT BAR ─── -->
 <div id="announcement-bar">
-  ⚡ Founding-partner rate: 3 clinic slots at SGD $1,800. <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})" style="margin-left:12px; padding:5px 14px; font-size:0.8rem; border-radius:4px;">Book your spot →</button>
+  ⚡ Now taking on new clinic clients in Singapore — live in about a week. <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})" style="margin-left:12px; padding:5px 14px; font-size:0.8rem; border-radius:4px;">Book your call →</button>
   <button class="bar-close" onclick="this.parentElement.style.display='none'" aria-label="Close">×</button>
 </div>
 
@@ -1001,47 +883,29 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">
         <div class="nav-logo-mark">
-          <!-- Frog in 3D transparent cube (blue on white) -->
           <svg viewBox="0 0 40 36" xmlns="http://www.w3.org/2000/svg">
-            <!-- 3D wireframe cube (isometric) -->
-            <!-- Top face -->
-            <polygon points="20,2 34,8 20,14 6,8"
-              fill="rgba(37,99,235,0.06)" stroke="#2563EB" stroke-width="1.1" stroke-linejoin="round"/>
-            <!-- Right face -->
-            <polygon points="34,8 34,26 20,32 20,14"
-              fill="rgba(37,99,235,0.03)" stroke="#2563EB" stroke-width="1.1" stroke-linejoin="round"/>
-            <!-- Left face -->
-            <polygon points="6,8 6,26 20,32 20,14"
-              fill="rgba(37,99,235,0.07)" stroke="#2563EB" stroke-width="1.1" stroke-linejoin="round"/>
-            <!-- Frog body -->
+            <polygon points="20,2 34,8 20,14 6,8" fill="rgba(37,99,235,0.06)" stroke="#2563EB" stroke-width="1.1" stroke-linejoin="round"/>
+            <polygon points="34,8 34,26 20,32 20,14" fill="rgba(37,99,235,0.03)" stroke="#2563EB" stroke-width="1.1" stroke-linejoin="round"/>
+            <polygon points="6,8 6,26 20,32 20,14" fill="rgba(37,99,235,0.07)" stroke="#2563EB" stroke-width="1.1" stroke-linejoin="round"/>
             <ellipse cx="16" cy="24" rx="5.5" ry="4.5" fill="#2563EB"/>
-            <!-- Frog head -->
             <circle cx="21" cy="18" r="5.5" fill="#2563EB"/>
-            <!-- Eye dome (protruding upward) -->
             <circle cx="25" cy="13.5" r="4" fill="#2563EB"/>
-            <!-- Eye iris -->
             <circle cx="25" cy="13.5" r="2.8" fill="white"/>
-            <!-- Eye pupil -->
             <circle cx="25" cy="13.5" r="1.3" fill="#1D4ED8"/>
-            <!-- Eye glint -->
             <circle cx="23.8" cy="12.5" r="0.65" fill="white"/>
-            <!-- Arm holding rifle -->
             <ellipse cx="22.5" cy="21" rx="2.5" ry="1.2" fill="#1E40AF" transform="rotate(-5 22.5 21)"/>
-            <!-- Rifle grip -->
             <rect x="23" y="19" width="4" height="3.2" rx="0.8" fill="#1E3A8A"/>
-            <!-- Rifle barrel -->
             <rect x="26.5" y="19.8" width="11.5" height="1.6" rx="0.8" fill="#1E3A8A"/>
-            <!-- Scope -->
             <rect x="24.5" y="17.2" width="5" height="1.8" rx="0.7" fill="#1E3A8A"/>
-            <!-- Muzzle -->
             <rect x="37" y="18.8" width="1.5" height="3.2" rx="0.5" fill="#1E3A8A"/>
           </svg>
         </div>
         Varus Core
       </a>
       <ul class="nav-links">
-        <li><a href="#pilot">The Pilot</a></li>
+        <li><a href="#services">What we do</a></li>
         <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#roi">ROI</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#about">About</a></li>
       </ul>
@@ -1055,26 +919,37 @@
   </div>
 </nav>
 
+<!-- ─── POV STRIP ─── -->
+<div id="pov-strip">
+  <div class="container">
+    <p><strong>"Most clinics don't have a marketing problem. They have a follow-up problem. We fix the follow-up."</strong></p>
+  </div>
+</div>
+
 <!-- ─── HERO ─── -->
 <section id="hero">
   <div class="container">
     <div class="hero-eyebrow reveal">
-      <span class="label"><span class="label-dot"></span>Patient Reactivation · Singapore</span>
+      <span class="label"><span class="label-dot"></span>AI front-desk systems for Singapore clinics</span>
     </div>
     <h1 class="hero-headline reveal">
-      Your dormant patients haven't left.<br /><span>They just need a reason to come back.</span>
+      Stop losing patients at the front desk —<br /><span>and win back the ones who already left.</span>
     </h1>
     <p class="hero-sub reveal">
-      Most clinics in Singapore have 200–1,500 patients who haven't returned in over 12 months. They're not lost — they moved on by inertia. We run 60-day WhatsApp reactivation campaigns to bring them back, without adding to your front desk's workload.
+      Two ways to start. Win back dormant patients with a guaranteed 60-day campaign, or put a 24/7 WhatsApp AI on your front desk that answers in English, Malay, Mandarin and Tamil and books straight into your calendar. Both month-to-month. Both built to show you a number.
     </p>
+    <div class="risk-reversal reveal">
+      <span class="risk-reversal-icon">🛡️</span>
+      <p><strong>You see the rebookings before you pay in full.</strong> Fewer than 10 patients back in 60 days, and you don't pay the rest. We carry the risk, not you.</p>
+    </div>
     <div class="hero-actions reveal">
       <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         Book a 30-Min Discovery Call
       </button>
-      <a href="#pilot" class="btn-secondary">See what's included →</a>
+      <a href="#roi" class="btn-secondary">See the ROI math →</a>
     </div>
-    <p class="hero-note reveal"><span>✓ Free · 30 minutes · No commitment.</span> &nbsp;We'll look at your patient volumes and tell you honestly whether reactivation is worth pursuing.</p>
+    <p class="hero-note reveal"><span>✓ Guaranteed results on reactivation · PDPA-compliant · Live in about a week · No lock-in</span></p>
   </div>
 </section>
 
@@ -1082,40 +957,89 @@
 <section id="trust">
   <div class="container">
     <div class="trust-inner">
-      <span class="trust-label">For dental &amp; medical clinics</span>
-      <div class="trust-divider"></div>
-      <div class="trust-stats">
-        <div class="trust-stat">
-          <span class="trust-stat-num">60 days</span>
-          <span class="trust-stat-label">Campaign duration</span>
-        </div>
-        <div class="trust-stat">
-          <span class="trust-stat-num">4–10%</span>
-          <span class="trust-stat-label">Typical rebook rate</span>
-        </div>
-        <div class="trust-stat">
-          <span class="trust-stat-num">PDPA</span>
-          <span class="trust-stat-label">Compliant</span>
-        </div>
-        <div class="trust-stat">
-          <span class="trust-stat-num">WhatsApp</span>
-          <span class="trust-stat-label">Powered</span>
-        </div>
-      </div>
       <div class="trust-badges">
         <div class="trust-badge">
           <svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-          DPA signed before data shared
+          Guaranteed results on reactivation
         </div>
         <div class="trust-badge">
           <svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-          No lock-in
+          PDPA-compliant · DPA signed first
         </div>
         <div class="trust-badge">
           <svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-          Results guaranteed
+          Live in about a week
+        </div>
+        <div class="trust-badge">
+          <svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          No lock-in · Month-to-month
+        </div>
+        <div class="trust-badge">
+          <svg class="trust-badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          Singapore-based
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TWO OFFERS ─── -->
+<section id="services" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label"><span class="label-dot"></span>What we do</span>
+      <h2>Two ways to start.<br />Pick the one that fits right now.</h2>
+      <p>Both are built and live. Both are built to show you a number within weeks, not months.</p>
+    </div>
+
+    <div class="offers-grid">
+
+      <!-- Offer 1: WhatsApp AI -->
+      <div class="offer-card reveal">
+        <div class="offer-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3>WhatsApp AI Front Desk</h3>
+        <p>A 24/7 AI that sits on your WhatsApp and handles enquiries, FAQs, appointment bookings, and lead follow-ups — in English, Malay, Mandarin and Tamil. Your team only steps in for clinical questions.</p>
+        <ul class="offer-features">
+          <li>Responds instantly, 24/7 — no more missed after-hours leads</li>
+          <li>Answers in English, Malay, Mandarin and Tamil</li>
+          <li>Qualifies patients and books straight into your calendar</li>
+          <li>Handles FAQs so your front desk isn't repeating the same answers all morning</li>
+          <li>Lead capture and staff handoff for anything outside scope</li>
+          <li>Monthly performance summary included</li>
+        </ul>
+        <div class="offer-price">
+          <div class="offer-price-from">Setup (one-time)</div>
+          <div class="offer-price-num">SGD $1,200 <span style="font-size:0.8rem;">+ $400/mo</span></div>
+          <div class="offer-price-note">See it working in week one.</div>
+        </div>
+        <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})" style="width:100%; justify-content:center;">Book a 30-Min Discovery Call</button>
+      </div>
+
+      <!-- Offer 2: 60-Day Campaign -->
+      <div class="offer-card featured reveal">
+        <div class="offer-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>60-Day Dormant Patient Campaign</h3>
+        <p>We message your dormant patient list via WhatsApp — personalised, PDPA-compliant, and approved by you before a single message goes out. Your team handles bookings when patients reply.</p>
+        <ul class="offer-features">
+          <li>3 data fields only (phone, last visit, opt-in flag) — no names, no medical data</li>
+          <li>20 message templates reviewed and approved by you first</li>
+          <li>Personalised outreach + 7-day follow-up to non-responders</li>
+          <li>Weekly one-page report (no jargon — just the numbers)</li>
+          <li>Daily monitoring for opt-outs, delivery failures, complaints</li>
+          <li>Full close-out report + all data returned to you</li>
+        </ul>
+        <div class="offer-price">
+          <div class="offer-price-from">Fixed · 60 days</div>
+          <div class="offer-price-num">SGD $2,500 <span>· $400/mo after</span></div>
+          <div class="offer-price-note" style="color:#166534; font-weight:600;">🛡️ Fewer than 10 rebookings → second payment waived</div>
+        </div>
+        <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})" style="width:100%; justify-content:center;">Book a 30-Min Discovery Call</button>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1125,90 +1049,71 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="label"><span class="label-dot"></span>The problem</span>
-      <h2>Your clinic is sitting on patients<br />who simply drifted away.</h2>
-      <p>They haven't switched clinics. They moved on by inertia. And without a system to reach out, they stay dormant — quietly costing you revenue every month.</p>
+      <h2>Two places your clinic<br />is losing revenue quietly.</h2>
+      <p>Neither is obvious until you look. Both are fixable in under two weeks.</p>
     </div>
     <div class="problem-grid">
       <div class="service-card reveal">
+        <div style="font-size:1.6rem; margin-bottom:14px;">🌙</div>
+        <h3>After-hours leads going cold</h3>
+        <p>A patient messages at 10pm. Your team sees it the next morning. By then, they've already booked elsewhere — and you have no idea you lost them.</p>
+      </div>
+      <div class="service-card reveal">
         <div style="font-size:1.6rem; margin-bottom:14px;">🛌</div>
-        <h3>Dormant patient lists</h3>
-        <p>Most clinics have 300–1,000+ patients who haven't visited in 9–18 months. They're not lost — they just haven't been contacted the right way.</p>
+        <h3>Dormant patients sitting untouched</h3>
+        <p>Most clinics have 300–1,000+ patients who haven't been back in over a year. They haven't left — they drifted. Your PMS recall module isn't getting them back.</p>
       </div>
       <div class="service-card reveal">
         <div style="font-size:1.6rem; margin-bottom:14px;">📞</div>
-        <h3>Manual recall doesn't scale</h3>
-        <p>Your front desk handles bookings, enquiries, and walk-ins. Chasing dormant patients on top of that is the first thing that gets skipped every single week.</p>
-      </div>
-      <div class="service-card reveal">
-        <div style="font-size:1.6rem; margin-bottom:14px;">💰</div>
-        <h3>Revenue sitting quiet</h3>
-        <p>Each returning patient is worth one to several visits in immediate revenue. Your dormant list is a revenue reserve — it just needs the right trigger.</p>
+        <h3>Front desk swamped with repeat questions</h3>
+        <p>Opening hours, fees, walk-in availability — the same questions, every day, from every new patient. Your team's time goes on admin instead of care.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── THE PILOT ─── -->
-<section id="pilot" class="section section-alt">
+<!-- ─── ROI ─── -->
+<section id="roi" class="section section-alt">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label"><span class="label-dot"></span>What we do</span>
-      <h2>A 60-day reactivation campaign.<br />Done for you.</h2>
-      <p>We handle everything — setup, messaging, monitoring, weekly reports, and close-out. Your team handles bookings when patients reply.</p>
+      <span class="label"><span class="label-dot"></span>Do the math</span>
+      <h2>Do the math before<br />you book a call.</h2>
     </div>
-
-    <div style="display:flex; flex-direction:column; gap:16px; max-width:760px; margin:0 auto 32px;">
-
-      <div class="pilot-phase reveal">
-        <div class="pilot-phase-num">1</div>
-        <div>
-          <div class="pilot-phase-label">Week 1 — Setup</div>
-          <h3>Everything approved by you before a single patient is contacted</h3>
-          <ul>
-            <li>Discovery call to confirm patient volumes, clinic voice, and approval flow</li>
-            <li>Data Processing Agreement signed before any patient data is shared</li>
-            <li>Secure intake of your dormant patient list (3 fields only: phone, last visit date, opt-in flag)</li>
-            <li>WhatsApp Business API configured to send from your clinic's identity</li>
-            <li>20 sample messages drafted and approved by you before going live</li>
-          </ul>
-        </div>
+    <div class="roi-table-wrap">
+      <p class="roi-intro reveal">Reactivation isn't marketing spend. It's revenue from patients you already paid to acquire — sitting in a list nobody's called.</p>
+      <div class="reveal" style="overflow-x:auto;">
+        <table class="roi-table">
+          <thead>
+            <tr>
+              <th>Dormant patients in your list</th>
+              <th>Rebooked at 3%*</th>
+              <th>First-visit revenue (~$150 each)**</th>
+              <th>60-day campaign cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>800</td>
+              <td>24</td>
+              <td class="highlight">~SGD $3,600</td>
+              <td>SGD $2,500</td>
+            </tr>
+            <tr>
+              <td>1,500</td>
+              <td>45</td>
+              <td class="highlight">~SGD $6,750</td>
+              <td>SGD $2,500</td>
+            </tr>
+            <tr>
+              <td>3,000</td>
+              <td>90</td>
+              <td class="highlight">~SGD $13,500</td>
+              <td>SGD $2,500</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
-      <div class="pilot-phase reveal">
-        <div class="pilot-phase-num">2</div>
-        <div>
-          <div class="pilot-phase-label">Weeks 2–8 — Live Campaign</div>
-          <h3>Personalised messages sent, replies land in your inbox</h3>
-          <ul>
-            <li>Personalised WhatsApp reminders sent on an agreed schedule</li>
-            <li>One follow-up message 7 days after the first, to patients who haven't replied</li>
-            <li>Replies go directly to your clinic's inbox — your team handles bookings</li>
-            <li>Daily checks for delivery failures, complaints, and opt-outs</li>
-            <li>Weekly mini-report (one page): messages sent, replies received, rebookings confirmed</li>
-            <li>Direct line to me via WhatsApp during business hours for anything urgent</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pilot-phase reveal">
-        <div class="pilot-phase-num">3</div>
-        <div>
-          <div class="pilot-phase-label">Week 8 — Close-Out</div>
-          <h3>Full report, honest assessment, your data back in your hands</h3>
-          <ul>
-            <li>Final report with the full numbers — messages sent, replies, confirmed rebookings</li>
-            <li>Plain-English breakdown of what worked, what didn't, what to do next</li>
-            <li>Recommendation on whether continuing makes sense for your clinic</li>
-            <li>All patient data and messaging logs returned to you in CSV format</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-
-    <p class="reveal" style="text-align:center; font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">No names required. No medical data. No access to your PMS.</p>
-    <div class="reveal" style="text-align:center;">
-      <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})">Book a 30-Min Discovery Call →</button>
+      <p class="roi-disclaimer reveal">* 3% is a deliberately conservative rebooking rate. Properly run campaigns for SG dental clinics typically produce 4–10%. &nbsp;** ~$150 illustrates a returning patient's check-up + scaling/polishing at 2026 Singapore private-clinic rates. Patients who need treatment are worth more — and every reactivated patient re-enters the 6-month recall cycle, compounding the value. Established practices often hold 2,000+ records. All figures are illustrative and not guaranteed results from Varus Core.</p>
     </div>
   </div>
 </section>
@@ -1218,24 +1123,24 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="label"><span class="label-dot"></span>The process</span>
-      <h2>From first call to first<br />rebooking — in under two weeks.</h2>
-      <p>Three steps. Your team approves everything before any patient is contacted.</p>
+      <h2>From first call to live<br />in about a week.</h2>
+      <p>Three steps. You approve everything before any patient is contacted or any message goes out.</p>
     </div>
     <div class="steps-grid">
       <div class="step reveal">
         <div class="step-num">1</div>
         <h3>30-Min Discovery Call</h3>
-        <p>We look at your patient volumes, confirm that reactivation is a good fit, and walk you through exactly how the campaign works — before you commit to anything.</p>
+        <p>We look at your patient volumes or front desk setup, confirm fit, and walk you through what a system would look like for your clinic — before you commit to anything.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">2</div>
         <h3>Setup &amp; Approval</h3>
-        <p>DPA signed, data securely received, WhatsApp API configured, and 20 sample messages approved by you. Nothing goes out until you've signed off.</p>
+        <p>For reactivation: DPA signed, data securely received, 20 message templates approved by you. For WhatsApp AI: your clinic's FAQs, services, and calendar connected. Nothing goes live until you sign off.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">3</div>
-        <h3>Campaign Runs. You Review Weekly.</h3>
-        <p>Messages go out, replies land in your inbox, your team books the appointments. You get a weekly one-page report — no jargon, just the numbers.</p>
+        <h3>Go Live. See the Numbers.</h3>
+        <p>WhatsApp AI visible from week one. Reactivation replies and rebookings tracked weekly. You get one clear report — no jargon, just the numbers that matter.</p>
       </div>
     </div>
   </div>
@@ -1246,60 +1151,85 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="label"><span class="label-dot"></span>Pricing</span>
-      <h2>One fixed fee.<br />One clear guarantee.</h2>
-      <p>No monthly subscription to start. One pilot fee, two payments — and if we don't hit the target, the second payment doesn't happen.</p>
+      <h2>Clear prices.<br />No surprises.</h2>
+      <p>Every engagement is month-to-month after setup. 30 days' notice to cancel. No auto-renewal.</p>
     </div>
 
-    <div class="pricing-hero-card reveal">
-      <div class="pricing-badge">⚡ Founding-partner rate — 3 clinic slots only</div>
-
-      <div class="pricing-price-row">
-        <div class="pricing-price">SGD $1,800</div>
-        <div class="pricing-price-label">fixed · 60-day pilot</div>
-      </div>
-      <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:24px;">50% on signing (SGD $900) · 50% on Day 60 (SGD $900)</p>
-
-      <div class="pricing-guarantee">
-        <div class="pricing-guarantee-icon">🛡️</div>
-        <p><strong>Guarantee:</strong> If fewer than 10 patients rebook within 60 days, the second payment of SGD $900 is waived. You keep all the data, all the messaging templates, and a full picture of which patient segments responded.</p>
-      </div>
-
-      <div class="pricing-details">
-        <div class="pricing-detail-item">60-day WhatsApp reactivation campaign</div>
-        <div class="pricing-detail-item">20 personalised messages — approved by you</div>
-        <div class="pricing-detail-item">Weekly mini-report (one page, no jargon)</div>
-        <div class="pricing-detail-item">Daily monitoring for delivery & opt-outs</div>
-        <div class="pricing-detail-item">Data Processing Agreement included</div>
-        <div class="pricing-detail-item">Final report + data returned to you</div>
-        <div class="pricing-detail-item">Direct WhatsApp line during business hours</div>
-        <div class="pricing-detail-item">No lock-in — pause or stop anytime after pilot</div>
-      </div>
-
-      <div class="pricing-payment-note">
-        After the 3 founding-partner slots are filled, the pilot rate moves to <strong>SGD $2,500</strong>. Reach out before they're gone.
-      </div>
-
-      <div style="margin-top:28px; text-align:center;">
-        <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})" style="font-size:1rem; padding:14px 32px;">Book a 30-Min Discovery Call →</button>
-        <p style="margin-top:12px; font-size:0.8rem; color:var(--text-muted);">Free · No commitment · We'll confirm fit before you decide anything</p>
-      </div>
+    <div class="pricing-table-wrap reveal">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Offering</th>
+            <th>Setup (one-time)</th>
+            <th>Monthly retainer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="pt-offering">WhatsApp AI <span class="pt-badge popular">Recommended entry point</span></div>
+              <div class="pt-desc">24/7 front desk — answers in 4 languages, books appointments, handles FAQs. Visible in week one.</div>
+            </td>
+            <td>
+              <div class="pt-price-setup">SGD $1,200</div>
+              <div class="pt-price-retainer">Paid once before go-live</div>
+            </td>
+            <td>
+              <div class="pt-price-setup">SGD $400<span style="font-size:0.8rem;font-weight:400;">/mo</span></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="pt-offering">Frontdesk AI <span style="font-size:0.72rem; color:var(--text-muted); font-weight:500;">(Premium / multi-system)</span></div>
+              <div class="pt-desc">Full AI front desk with deeper integrations — clinic management systems, multi-branch, advanced workflows.</div>
+            </td>
+            <td>
+              <div class="pt-price-setup">SGD $4,000</div>
+              <div class="pt-price-retainer">Paid once before go-live</div>
+            </td>
+            <td>
+              <div class="pt-price-setup">SGD $800<span style="font-size:0.8rem;font-weight:400;">/mo</span></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="pt-offering">60-Day Dormant Patient Campaign <span class="pt-badge guaranteed">Guaranteed</span></div>
+              <div class="pt-desc">Bring back patients who haven't visited in 9–18+ months. Fixed fee, PDPA-compliant, results guaranteed.</div>
+            </td>
+            <td>
+              <div class="pt-price-setup">SGD $2,500</div>
+              <div class="pt-price-retainer">50% on signing · 50% on Day 60</div>
+            </td>
+            <td>
+              <div class="pt-price-setup">SGD $400<span style="font-size:0.8rem;font-weight:400;">/mo</span></div>
+              <div class="pt-price-retainer">If you continue after the pilot</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="pt-offering">Custom Solutions</div>
+              <div class="pt-desc">Bespoke automation built around your specific workflows. If you can describe the problem, we scope it together.</div>
+            </td>
+            <td>
+              <div class="pt-price-setup" style="font-size:1rem;">Quote-based</div>
+              <div class="pt-price-retainer">Scoped on discovery call</div>
+            </td>
+            <td>
+              <div class="pt-price-setup" style="font-size:1rem;">Quote-based</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="pricing-after reveal">
-      <h3>After the pilot — your options</h3>
-      <div class="pricing-after-options">
-        <div class="pricing-after-option">
-          <div class="pricing-after-option-label">Continue on retainer</div>
-          <div class="pricing-after-option-price">From $1,200<span style="font-size:0.85rem; font-weight:400; color:var(--text-muted);">/mo</span></div>
-          <div class="pricing-after-option-desc">Ongoing recall, weekly reports, all tools included. Month-to-month, 30 days' notice to cancel.</div>
-        </div>
-        <div class="pricing-after-option">
-          <div class="pricing-after-option-label">Pause or close out</div>
-          <div class="pricing-after-option-price" style="color:var(--success);">$0</div>
-          <div class="pricing-after-option-desc">Close out cleanly. You keep all data, all templates, all reports. No obligation. No auto-renewal.</div>
-        </div>
-      </div>
-      <p style="margin-top:16px; font-size:0.82rem; color:var(--text-muted);">You decide actively whether to continue at the end of the 60 days. We don't roll you into anything automatically.</p>
+    <div class="pricing-guarantee-card reveal">
+      <span class="pricing-guarantee-card-icon">🛡️</span>
+      <p><strong>Reactivation guarantee:</strong> If fewer than 10 dormant patients rebook within 60 days, the second payment of SGD $1,250 is waived. You keep all the data, all the messaging templates, and the full close-out report. We carry the risk — not you.</p>
+    </div>
+
+    <div class="pricing-cta reveal">
+      <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:20px;">Not sure which is right for your clinic? We'll walk you through it on the discovery call — no commitment required.</p>
+      <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})" style="font-size:1rem; padding:14px 32px;">Book a 30-Min Discovery Call →</button>
     </div>
 
   </div>
@@ -1312,9 +1242,9 @@
       <div class="about-content reveal">
         <span class="label"><span class="label-dot"></span>Who we are</span>
         <h2>I noticed what clinics were losing.<br />Varus Core is the fix.</h2>
-        <p>Most clinics in Singapore have hundreds of patients who haven't come back in over a year. They're sitting in a spreadsheet or a PMS export, untouched. Not because the clinic doesn't care — because the front desk doesn't have bandwidth to chase them, and the recall module in the PMS isn't producing real rebookings.</p>
-        <p>The revenue loss is quiet. No single dramatic moment. Just appointments that never got rebooked and patients who went elsewhere without ever saying why.</p>
-        <p>Varus Core exists to fix that. I run targeted WhatsApp reactivation campaigns that bring those patients back — personalised, PDPA-compliant, and handled for you from start to finish.</p>
+        <p>Most clinics in Singapore are running their front desk on WhatsApp, a shared phone, and someone's memory. Enquiries go unanswered after hours. Dormant patient lists sit untouched in a PMS export. Admin staff spend half their day on questions that could be answered automatically.</p>
+        <p>The revenue loss is quiet. No single dramatic moment — just leads that never converted, patients who never came back, and appointments that never got rebooked.</p>
+        <p>Varus Core exists to fix that. I build WhatsApp AI systems and run targeted reactivation campaigns — both designed to show you a measurable number within weeks, not months.</p>
         <div class="about-values">
           <div class="about-value">
             <div class="about-value-icon">
@@ -1331,7 +1261,7 @@
             </div>
             <div class="about-value-text">
               <h4>You approve everything first</h4>
-              <p>No patient is contacted until you've reviewed and approved every message template.</p>
+              <p>No patient is contacted and no AI goes live until you've reviewed and signed off.</p>
             </div>
           </div>
           <div class="about-value">
@@ -1340,21 +1270,21 @@
             </div>
             <div class="about-value-text">
               <h4>Singapore-based, always reachable</h4>
-              <p>Reach me on WhatsApp. If something needs attention during the campaign, it gets handled fast.</p>
+              <p>Reach me on WhatsApp. If something needs attention, it gets handled fast.</p>
             </div>
           </div>
         </div>
       </div>
 
       <div class="about-visual reveal">
-        <h3>The pilot at a glance</h3>
+        <h3>The reactivation pilot at a glance</h3>
         <div class="pilot-snapshot-row">
-          <span class="pilot-snapshot-label">What you get</span>
-          <span class="pilot-snapshot-value">60-day reactivation campaign</span>
+          <span class="pilot-snapshot-label">Campaign duration</span>
+          <span class="pilot-snapshot-value">60 days</span>
         </div>
         <div class="pilot-snapshot-row">
           <span class="pilot-snapshot-label">Fee</span>
-          <span class="pilot-snapshot-value">SGD $1,800 fixed</span>
+          <span class="pilot-snapshot-value">SGD $2,500 fixed</span>
         </div>
         <div class="pilot-snapshot-row">
           <span class="pilot-snapshot-label">Payment</span>
@@ -1398,23 +1328,39 @@
           What is patient reactivation?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">Patient reactivation is reaching out to patients who haven't visited in 9–18+ months to bring them back. Most haven't switched clinics — they drifted away. A well-timed, personalised message via WhatsApp is often all it takes. We handle the outreach, you handle the bookings when patients reply.</div>
+        <div class="faq-answer">Patient reactivation is reaching out to patients who haven't visited in 9–18+ months to bring them back. Most haven't switched clinics — they drifted away. A well-timed, personalised WhatsApp message is often all it takes. We handle the outreach; your team handles bookings when patients reply.</div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How many patients can realistically be reactivated?
+          What is the WhatsApp AI and what does it do?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">From campaign data and industry benchmarks for Singapore dental and medical clinics, a properly run reactivation typically produces a 4–10% rebooking rate on a 9–18 month dormant list. For a clinic with 300 dormant patients, that's 12–30 rebookings. This depends on how clean your data is, how long patients have been dormant, and how relevant your clinic is to them still. We'll give you a realistic estimate on the discovery call.</div>
+        <div class="faq-answer">It's a 24/7 automated front desk that lives inside your clinic's WhatsApp. It responds to patient enquiries instantly — answering FAQs, sharing pricing and opening hours, qualifying leads, and booking appointments directly into your calendar. It works in English, Malay, Mandarin and Tamil. Your team only needs to step in for clinical questions. Setup from SGD $1,200, then $400/month with no lock-in.</div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What patient data do you need?
+          How quickly can I see the WhatsApp AI working?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">Three fields per patient: phone number, last visit date, and opt-in flag. That's it. No names required — we can use pseudonyms (e.g. Patient #4471) if you prefer. No medical history, no diagnoses, no billing data. Just enough to send a personalised reminder and confirm they consented to contact.</div>
+        <div class="faq-answer">Most setups go live within a week of the discovery call. From day one, after-hours enquiries get answered instantly instead of sitting overnight. You can see it working in week one — the monthly report shows exactly how many conversations it handled and how many led to bookings.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What if fewer than 10 patients rebook in 60 days?
+          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">The second payment of SGD $1,250 is waived. You keep all the data, all the message templates, and the full close-out report covering which patient segments responded and what to do next. Even if only 9 patients come back, those rebookings likely cover the first $1,250 in first-visit revenue — but if we haven't earned the second half, we don't take it.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What patient data do you need for reactivation?
+          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Three fields per patient: phone number, last visit date, and opt-in flag. No names required — we can use pseudonyms (e.g. Patient #4471) if you prefer. No medical history, no diagnoses, no billing data. Just enough to send a personalised reminder and confirm they consented to be contacted.</div>
       </div>
 
       <div class="faq-item reveal">
@@ -1422,7 +1368,7 @@
           Is this PDPA compliant?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">Yes. Your clinic remains the Data Controller. Varus Core operates as your Data Intermediary under PDPA Part VIB. A Data Processing Agreement is signed before any patient data is shared. Patient data is stored in Singapore (AWS Singapore region), used only for the campaign, and purged within 30 days of the pilot ending. In the event of a data breach, you will be notified within 72 hours.</div>
+        <div class="faq-answer">Yes. Your clinic remains the Data Controller. Varus Core operates as your Data Intermediary under PDPA Part VIB. A Data Processing Agreement is signed before any patient data is shared. Data is stored in Singapore (AWS Singapore region), used only for the campaign, and purged within 30 days of completion. In the event of a breach, you are notified within 72 hours.</div>
       </div>
 
       <div class="faq-item reveal">
@@ -1430,31 +1376,15 @@
           My front desk is busy. How much does this add to their workload?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">Minimal. Your front desk receives patient replies in your normal WhatsApp inbox and books the appointments as usual. They don't handle any part of the campaign itself — that's handled entirely on our side. The only extra work is converting replies into bookings, which is exactly the kind of work your front desk is already set up to do.</div>
+        <div class="faq-answer">Minimal. For reactivation: your team receives patient replies in your normal WhatsApp inbox and books appointments as usual. They don't touch the campaign itself. For WhatsApp AI: it actively reduces your front desk's workload — handling the repetitive enquiries that eat up their morning so they can focus on patients in the clinic.</div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How quickly will we see results?
+          What happens after the 60-day reactivation campaign?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">Patient replies typically start within the first week. However, confirmed rebookings usually follow 2–4 weeks after the first message — patients often reply to say they're interested but then take a few weeks to confirm a date. This is why the pilot is 60 days and not 30: it measures actual rebookings, not just responses.</div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          What if fewer than 10 patients rebook?
-          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
-        <div class="faq-answer">The second payment of SGD $900 is waived. You keep all the data, all the messaging templates, and a full close-out report covering which patient segments responded and what to do next. Even 9 rebookings are likely worth more than the pilot fee in first-visit revenue — but if we haven't earned the second half, we don't take it.</div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          What happens after the 60-day pilot?
-          <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
-        <div class="faq-answer">You'll have a full report and a real number. From there, three options: continue on a monthly retainer (from $1,200/month, month-to-month, 30 days' notice to cancel), pause and revisit later (no obligation), or have the workflow documented and handed off to your team (one-time fee). No auto-renewal. You decide actively.</div>
+        <div class="faq-answer">You get a full report and a real number. Three options: continue on a monthly retainer ($400/month, month-to-month, 30 days' notice to cancel), pause and revisit later (no obligation), or have the workflow documented and handed off to your team. No auto-renewal — you decide actively.</div>
       </div>
 
       <div class="faq-item reveal">
@@ -1462,7 +1392,7 @@
           Is this only for dental and medical clinics?
           <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer">We focus on dental and medical clinics because that's where we have the most experience and data. If you run a different type of practice — aesthetic, physio, TCM, dental specialist — reach out and we'll tell you honestly whether the model fits.</div>
+        <div class="faq-answer">We focus on dental and medical clinics because that's where we have the most context — but the underlying systems work for any practice that handles patient enquiries or recall. Aesthetic, physio, TCM, dental specialists — reach out and we'll tell you honestly whether it's a fit.</div>
       </div>
 
     </div>
@@ -1473,15 +1403,18 @@
 <section id="cta">
   <div class="container">
     <span class="label"><span class="label-dot"></span>Get started</span>
-    <h2>Find out how many dormant<br />patients your clinic has.</h2>
-    <p>Book a free 30-minute discovery call. We'll look at your patient volumes, tell you honestly whether reactivation makes sense, and walk you through what the campaign would look like — before you commit to anything.</p>
+    <h2>Find out where your clinic<br />is losing patients right now.</h2>
+    <p>Book a free 30-minute discovery call. We'll look at your setup — front desk or dormant list — tell you honestly whether there's a fit, and show you what the numbers could look like before you commit to anything.</p>
+    <div class="cta-risk-reversal">
+      <strong>You see the rebookings before you pay in full.</strong> Fewer than 10 patients back in 60 days, and you don't pay the rest. We carry the risk, not you.
+    </div>
     <div class="cta-actions">
       <button class="btn-white" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'})">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         Book a 30-Min Discovery Call
       </button>
     </div>
-    <p style="margin-top:20px; font-size:0.82rem; color:#475569;">Free · No commitment · 3 founding-partner slots remaining at SGD $1,800</p>
+    <p style="margin-top:20px; font-size:0.82rem; color:#475569;">Free · No commitment · No lock-in after</p>
   </div>
 </section>
 
@@ -1511,20 +1444,21 @@
           </div>
           Varus Core
         </a>
-        <p>Patient reactivation campaigns for dental and medical clinics in Singapore. PDPA-compliant, WhatsApp-powered, results guaranteed.</p>
+        <p>WhatsApp AI front desk systems and patient reactivation campaigns for dental and medical clinics in Singapore. PDPA-compliant. Results guaranteed.</p>
       </div>
       <div class="footer-links-group">
         <h4>Company</h4>
         <a href="#about">About</a>
-        <a href="#pilot">The Pilot</a>
-        <a href="#how-it-works">How it works</a>
+        <a href="#services">What we do</a>
+        <a href="#pricing">Pricing</a>
         <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'}); return false;">Contact</a>
       </div>
       <div class="footer-links-group">
-        <h4>The Pilot</h4>
-        <a href="#pilot">What's included</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/varuscore/30min'}); return false;">Book a call</a>
+        <h4>Services</h4>
+        <a href="#services">WhatsApp AI</a>
+        <a href="#services">Patient Reactivation</a>
+        <a href="#roi">ROI Calculator</a>
+        <a href="#how-it-works">How it works</a>
       </div>
       <div class="footer-links-group">
         <h4>Contact</h4>
